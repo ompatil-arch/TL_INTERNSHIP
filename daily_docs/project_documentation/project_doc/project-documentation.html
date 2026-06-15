@@ -5,152 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Smart Attendance System — Project Documentation | Om Patil</title>
 <meta name="description" content="Project documentation for a smart attendance system built with ESP32, RC522 RFID, Google Sheets and embedded IoT hardware." />
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: #f0f4f8;
-        line-height: 1.6;
-        color: #1e293b;
-    }
-    
-    .doc-container {
-        max-width: 1000px;
-        margin: 2rem auto;
-        background: white;
-        border-radius: 28px;
-        box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
-        overflow: hidden;
-        padding: 2rem;
-    }
-    
-    .back {
-        display: inline-block;
-        background: #1e3a8a;
-        color: white;
-        text-decoration: none;
-        padding: 0.6rem 1.2rem;
-        border-radius: 30px;
-        font-size: 0.9rem;
-        margin-bottom: 1.5rem;
-        transition: 0.2s;
-    }
-    
-    .back:hover {
-        background: #0f2b6d;
-        transform: translateX(-3px);
-    }
-    
-    .back-bottom {
-        margin-top: 2rem;
-        margin-bottom: 0;
-    }
-    
-    .doc-head {
-        text-align: center;
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
-        border-bottom: 3px solid #3b82f6;
-    }
-    
-    .kicker {
-        color: #3b82f6;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 0.8rem;
-    }
-    
-    .doc-head h1 {
-        font-size: 2.5rem;
-        color: #1e3a8a;
-        margin: 0.5rem 0;
-    }
-    
-    .tagline {
-        color: #475569;
-        font-weight: 500;
-    }
-    
-    .docx-content h1 {
-        color: #1e3a8a;
-        margin: 1.5rem 0 1rem;
-        font-size: 1.8rem;
-    }
-    
-    .docx-content h2 {
-        color: #2563eb;
-        margin: 1.5rem 0 1rem;
-        font-size: 1.5rem;
-        border-left: 4px solid #3b82f6;
-        padding-left: 1rem;
-    }
-    
-    .docx-content h3 {
-        color: #334155;
-        margin: 1.2rem 0 0.8rem;
-        font-size: 1.2rem;
-    }
-    
-    .docx-content p {
-        margin: 1rem 0;
-    }
-    
-    .docx-content img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        margin: 1rem 0;
-        display: block;
-    }
-    
-    .docx-content table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 1rem 0;
-        background: #f8fafc;
-        border-radius: 12px;
-        overflow: hidden;
-    }
-    
-    .docx-content th, .docx-content td {
-        border: 1px solid #e2e8f0;
-        padding: 0.75rem;
-        text-align: left;
-    }
-    
-    .docx-content th {
-        background: #e0e7ff;
-        font-weight: 600;
-    }
-    
-    .video-wrap {
-        margin: 1.5rem 0;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    
-    .video-wrap video {
-        width: 100%;
-        display: block;
-    }
-    
-    @media (max-width: 768px) {
-        .doc-container {
-            margin: 1rem;
-            padding: 1rem;
-        }
-        .doc-head h1 {
-            font-size: 1.8rem;
-        }
-    }
-</style>
+<link rel="stylesheet" href="/days/_style.css" />
 </head>
 <body>
   <div class="doc-container">
@@ -181,47 +36,73 @@ access, and improved record management, making it a practical
 application of IoT and embedded systems.</p>
 <h2>3D Modelling the Parts Using Fusion 360</h2>
 <p>Step 1: Open Fusion 360</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img1.png" alt="Fusion 360 Step 1" /></p>
+<p><img src="/days/media/project/image1.png"
+style="width:6.26806in;height:4.18339in" /></p>
 <p>Step 2: Create a new Project</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img2.png" alt="New Project" /></p>
+<p><img src="/days/media/project/image2.png"
+style="width:6.26806in;height:3.12197in" /></p>
 <p>Step 3: Select Part and Click on create</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img3.png" alt="Select Part" /></p>
+<p><img src="/days/media/project/image3.png"
+style="width:6.26806in;height:4.04946in" /></p>
 <p>Step 4: Draw the rectangle of dimensions 140 * 100</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img4.png" alt="Draw Rectangle" /></p>
+<p><img src="/days/media/project/image4.png"
+style="width:6.26806in;height:4.16062in" /></p>
 <p>Step 5: Extrude the part by 25 mm</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img5.png" alt="Extrude Part" /></p>
+<p><img src="/days/media/project/image5.png"
+style="width:6.26806in;height:3.72936in" /></p>
 <p>Step 6: shell the part by 2.5 mm</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img6.png" alt="Shell Part" /></p>
+<p><img src="/days/media/project/image6.png"
+style="width:6.26806in;height:3.42064in" /></p>
 <p>Step 7: Make bosses for screws</p>
 <p>Start with four circles of diameter 10 mm at each corner</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img7.png" alt="Circles for screws" /></p>
+<p><img src="/days/media/project/image7.png"
+style="width:5.67788in;height:3.82345in" /></p>
 <p>Extrude it by 10mm</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img8.png" alt="Extrude circles" /></p>
-<p>Now create a circle above all circles of diameter 3.2 mm and extrude it by 10 mm</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img9.png" alt="Screw holes" /></p>
+<p><img src="/days/media/project/image8.png"
+style="width:6.26806in;height:3.90146in" /></p>
+<p>Now create a circle above all circles of diameter 3.2 mm and extrude
+it by 10 mm</p>
+<p><img src="/days/media/project/image9.png"
+style="width:6.26806in;height:3.52109in" /></p>
 <h3>Part 2</h3>
 <p>Step 1: Select a new part and click on create</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img3.png" alt="Create new part" /></p>
+<p><img src="/days/media/project/image3.png"
+style="width:6.26806in;height:4.04931in" /></p>
 <p>Step 2: Draw the rectangle of dimensions 140 * 100</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img4.png" alt="Draw rectangle part 2" /></p>
+<p><img src="/days/media/project/image4.png"
+style="width:6.26806in;height:4.16042in" /></p>
 <p>Step 3: Extrude it by 3mm</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img10.png" alt="Extrude 3mm" /></p>
+<p><img src="/days/media/project/image10.png"
+style="width:6.26806in;height:3.12934in" /></p>
 <p>Step 4: Create 4 Screw holes of diameter 3.2 mm</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img11.png" alt="Screw holes" /></p>
+<p><img src="/days/media/project/image11.png"
+style="width:6.26806in;height:4.34143in" /></p>
 <p>Step 5: Extrude through all</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img12.png" alt="Extrude through" /></p>
-<p>Step 6: Create a 15*8 rectangle at bottom for USB wires and extrude it</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img13.png" alt="USB wire hole" /></p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img14.png" alt="USB hole extruded" /></p>
+<p><img src="/days/media/project/image12.png"
+style="width:6.26806in;height:4.73988in" /></p>
+<p>Step 6: Create a 15*8 rectangle at bottom for USB wires and extrude
+it</p>
+<p><img src="/days/media/project/image13.png"
+style="width:6.26806in;height:4.53965in" /></p>
+<p><img src="/days/media/project/image14.png"
+style="width:6.26806in;height:4.618in" /></p>
 <p>Step 7: Create a mount wall design and extrude it</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img15.png" alt="Mount wall" /></p>
-<p>Final Printed Parts</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img16.png" alt="Printed parts 1" /></p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img17.png" alt="Printed parts 2" /></p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img18.png" alt="Printed parts 3" /></p>
-
+<p><img src="/days/media/project/image15.png"
+style="width:6.26806in;height:4.30393in" /></p>
+<p>Final Printed Parts <img src="/days/media/project/image16.png"
+style="width:6.26806in;height:4.58472in" /></p>
+<p><img src="/days/media/project/image17.png"
+style="width:6.26806in;height:5.01111in" /></p>
+<p><img src="/days/media/project/image18.png"
+style="width:6.26806in;height:4.68819in" /></p>
 <h2>Wiring ESP32 and RC522</h2>
 <table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 16%" />
+<col style="width: 28%" />
+<col style="width: 31%" />
+</colgroup>
 <thead>
 <tr>
 <th><strong>RC522 RFID Module</strong></th>
@@ -269,78 +150,120 @@ application of IoT and embedded systems.</p>
 </tr>
 </tbody>
 </table>
-<p>I prefer using PCB method for wiring to reduce confusing wiring process</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img19.png" alt="PCB wiring 1" /></p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img20.png" alt="PCB wiring 2" /></p>
-
+<p>I prefer using PCB method for wiring to reduce confusing wiring
+process</p>
+<p><img src="/days/media/project/image19.png"
+style="width:6.26806in;height:3.73472in" /></p>
+<p><img src="/days/media/project/image20.png"
+style="width:6.26806in;height:4.66042in" /></p>
 <h2>Create the Attendance Spreadsheet</h2>
 <p>Open Google Spreadsheet</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img21.png" alt="Google Sheets" /></p>
+<p><img src="/days/media/project/image21.png"
+style="width:6.26806in;height:2.52708in" /></p>
 <p>Select the following link</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img22.png" alt="Spreadsheet link" /></p>
+<p><img src="/days/media/project/image22.png"
+style="width:6.26806in;height:1.01875in" /></p>
 <p>Write TIME NAME and ID as shown in the image</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img23.png" alt="Headers" /></p>
+<p><img src="/days/media/project/image23.png"
+style="width:6.26806in;height:1.61042in" /></p>
 <p>Now copy the key between /d/ and /edit</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img24.png" alt="Copy spreadsheet key" /></p>
-
+<p><img src="/days/media/project/image24.png"
+style="width:6.26806in;height:0.54097in" /></p>
 <h2>Creating the Google Script</h2>
 <p>Open Google and search google script</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img25.png" alt="Google Apps Script search" /></p>
+<p><img src="/days/media/project/image25.png"
+style="width:6.26806in;height:3.26667in" /></p>
 <p>Click on the link</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img26.png" alt="Apps Script link" /></p>
+<p><img src="/days/media/project/image26.png"
+style="width:6.26806in;height:1.05764in" /></p>
 <p>Click on new project</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img27.png" alt="New project" /></p>
+<p><img src="/days/media/project/image27.png"
+style="width:6.26806in;height:0.85278in" /></p>
 <p>Delete all the default code</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img28.png" alt="Delete default code" /></p>
+<p><img src="/days/media/project/image28.png"
+style="width:6.26806in;height:3.55in" /></p>
 <p>And paste the code</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img29.png" alt="Paste code" /></p>
-<p>Replace the ID of spreadsheet with the link which we copied from URL of the spreadsheet</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img30.png" alt="Replace spreadsheet ID" /></p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img31.png" alt="ID replaced" /></p>
+<p><img src="/days/media/project/image29.png"
+style="width:6.26806in;height:3.39931in" /></p>
+<p>Replace the ID of spreadsheet with the link which we copied from URL
+of the spreadsheet</p>
+<p><img src="/days/media/project/image30.png"
+style="width:6.26806in;height:1.25in" /></p>
+<p><img src="/days/media/project/image31.png"
+style="width:6.26806in;height:0.99861in" /></p>
 <p>Now click on new deployment under deploy</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img32.png" alt="New deployment" /></p>
+<p><img src="/days/media/project/image32.png"
+style="width:6.26806in;height:2.53056in" /></p>
 <p>Select Deployment type web app</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img33.png" alt="Web app deployment" /></p>
+<p><img src="/days/media/project/image33.png"
+style="width:4.87568in;height:3.4484in" /></p>
 <p>Fill in:</p>
 <p>Description attendance system</p>
 <p>Execute as: me</p>
-<p>Who has access: anyone MUST BE THIS EXACT OPTION</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img34.png" alt="Deployment settings" /></p>
+<p>Who has access: anyone MUST BE THIS EXACT OPTION</p>
+<p><img src="/days/media/project/image34.png"
+style="width:6.26806in;height:4.97639in" /></p>
 <p>Now click on deploy</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img35.png" alt="Deploy button" /></p>
+<p><img src="/days/media/project/image35.png"
+style="width:6.26806in;height:2.91944in" /></p>
 <p>Authorize your access</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img36.png" alt="Authorization" /></p>
+<p><img src="/days/media/project/image36.png"
+style="width:6.26806in;height:5in" /></p>
 <p>Click on advanced</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img37.png" alt="Advanced" /></p>
+<p><img src="/days/media/project/image37.png"
+style="width:6.26806in;height:5.15139in" /></p>
 <p>Select go to the untitled project</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img38.png" alt="Go to project" /></p>
+<p><img src="/days/media/project/image38.png"
+style="width:6.26806in;height:1.16875in" /></p>
 <p>Scroll down and click on continue</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img39.png" alt="Continue" /></p>
-<p>Now After clicking on continue you will get two links one of URL and another one of Deployment ID</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img40.png" alt="Deployment links" /></p>
-<p>Now copy the URL and paste on browser and check if its working or not</p>
+<p><img src="/days/media/project/image39.png"
+style="width:5.77164in;height:6.57383in" /></p>
+<p>Now After clicking on continue you will get two links one of URL and
+another one of Deployment ID</p>
+<p><img src="/days/media/project/image40.png"
+style="width:6.26806in;height:3.18611in" /></p>
+<p>Now copy the URL and paste on browser and check if its working or
+not</p>
 <p>You should see result as</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img41.png" alt="Test result" /></p>
-
+<p><img src="/days/media/project/image41.png"
+style="width:6.26806in;height:0.44931in" /></p>
 <h2>Programming the ESP32</h2>
 <p>Open Arduino IDE in your PC/Laptop</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img42.png" alt="Arduino IDE" /></p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img43.png" alt="Arduino IDE open" /></p>
+<p><img src="/days/media/project/image42.png"
+style="width:6.26806in;height:3.33889in" /></p>
+<p><img src="/days/media/project/image43.png"
+style="width:6.26806in;height:1.94861in" /></p>
 <p>Connect ESP32 with USB cable to Laptop/PC</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img44.png" alt="ESP32 connected" /></p>
+<p><img src="/days/media/project/image44.png"
+style="width:6.26806in;height:4.68056in" /></p>
 <p>Now paste the code which is required for Project</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img45.png" alt="Paste Arduino code" /></p>
+<p><img src="/days/media/project/image45.png"
+style="width:6.26806in;height:1.49792in" /></p>
 <p>After Pasting code add Wi-Fi and password to the code</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img46.png" alt="Add WiFi credentials" /></p>
-
+<p><img src="/days/media/project/image46.png"
+style="width:6.26806in;height:2.36319in" /></p>
 <h2>Testing the System</h2>
-<div class="video-wrap"><video controls playsinline preload="metadata"><source src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\video1.mp4" type="video/mp4" />Your browser does not support HTML video.</video></div>
-<div class="video-wrap"><video controls playsinline preload="metadata"><source src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\video2.mp4" type="video/mp4" />Your browser does not support HTML video.</video></div>
-<p>After tapping RFID card LED blinks 2 times indicating that the user ID is authenticated and the information is sent to the cloud</p>
-<p><img src="C:\Users\Sai\Documents\TL_INTERNSHIP\daily_docs\project_documentation\project_doc\img49.png" alt="RFID test" /></p>
-
+<div class="video-wrap"><video controls playsinline preload="metadata"><source src="/days/media/project/project-video-2.mp4" type="video/mp4" />Your browser does not support HTML video.</video></div>
+<div class="video-wrap"><video controls playsinline preload="metadata"><source src="/days/media/project/project-video.mp4" type="video/mp4" />Your browser does not support HTML video.</video></div>
+<p>After tapping RFID card LED blinks 2 times indicating that the user
+ID is authenticated and the information is sent to the cloud</p>
+<p><img src="/days/media/project/image49.png"
+style="width:3.9068in;height:5.6362in" /></p>
 <h2>Conclusion</h2>
-<p>The Smart Attendance System developed using ESP32 and RFID technology provides an efficient, automated, and reliable method for recording attendance. By integrating the RC522 RFID reader with the ESP32 microcontroller, attendance data can be captured quickly and accurately without manual intervention. The system reduces human errors, saves time, and improves record management. Through connectivity features such as Wi-Fi, attendance records can be stored and monitored in real time using cloud platforms like Google Sheets or Firebase. This project demonstrates the practical application of IoT in educational institutions and workplaces, offering a scalable and cost-effective solution for modern attendance management. Overall, the Smart Attendance System enhances accuracy, transparency, and operational efficiency while showcasing the capabilities of embedded systems and cloud integration.</p>
+<p>The Smart Attendance System developed using ESP32 and RFID technology
+provides an efficient, automated, and reliable method for recording
+attendance. By integrating the RC522 RFID reader with the ESP32
+microcontroller, attendance data can be captured quickly and accurately
+without manual intervention. The system reduces human errors, saves
+time, and improves record management. Through connectivity features such
+as Wi-Fi, attendance records can be stored and monitored in real time
+using cloud platforms like Google Sheets or Firebase. This project
+demonstrates the practical application of IoT in educational
+institutions and workplaces, offering a scalable and cost-effective
+solution for modern attendance management. Overall, the Smart Attendance
+System enhances accuracy, transparency, and operational efficiency while
+showcasing the capabilities of embedded systems and cloud
+integration.</p>
 
     </article>
     <a class="back back-bottom" href="/#internship">← Back to main page</a>
