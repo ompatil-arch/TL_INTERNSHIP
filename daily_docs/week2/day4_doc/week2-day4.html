@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Week 2 Day 4 — ESP32 LED Blink using Wokwi | Om Patil Internship</title>
+<link rel="stylesheet" href="/days/_style.css" />
+</head>
+<body>
+  <div class="doc-container">
+    <a class="back" href="/#internship">← Back to main page</a>
+    <header class="doc-head">
+      <p class="kicker">Week 2 — Summer Internship</p>
+      <h1>Day 4</h1>
+      <p class="tagline">ESP32 LED Blink using Wokwi</p>
+    </header>
+    <article class="docx-content">
+<p><strong>ESP32 LED Blink using Wokwi</strong></p>
+<p><strong>Objective</strong></p>
+<p>Learn ESP32 simulation using Wokwi, build and test an LED Blink
+project, understand virtual circuit design, and manage project
+documentation using VS Code and GitHub.</p>
+<p><strong>Phase 1: Environment Setup</strong></p>
+<p><strong>1. Discovering Wokwi</strong></p>
+<p>Researched ESP32 simulators and identified Wokwi as a browser-based
+simulation platform for Arduino, ESP32, STM32, and Raspberry Pi Pico
+projects.</p>
+<p><img src="/days/media/w2d4/image1.png"
+style="width:6.26806in;height:4.11736in" /></p>
+<p><strong>2. Exploring the Wokwi Platform</strong></p>
+<p><img src="/days/media/w2d4/image2.png"
+style="width:6.26806in;height:3.075in" /></p>
+<p>Opened the Wokwi homepage and reviewed available templates, examples,
+and supported hardware boards.</p>
+<p><strong>3. User Authentication</strong></p>
+<p>Signed in using Google or GitHub to enable project saving, cloud
+access, and collaboration features.</p>
+<p><img src="/days/media/w2d4/image3.png"
+style="width:6.26806in;height:2.50903in" /></p>
+<p><img src="/days/media/w2d4/image4.png"
+style="width:6.26806in;height:2.53889in" /></p>
+<p><strong>4. Choosing the ESP32 Board</strong></p>
+<p><img src="/days/media/w2d4/image5.png"
+style="width:6.26806in;height:3.89167in" /></p>
+<p>Selected an ESP32 development board template to create a new
+simulation project.</p>
+<p><strong>Phase 2: Coding &amp; Circuit Design</strong></p>
+<p><strong>5. Verifying the Simulator</strong></p>
+<p>Created a basic ESP32 program with serial output to confirm that the
+simulation environment was functioning correctly.</p>
+<p><img src="/days/media/w2d4/image6.png"
+style="width:6.26806in;height:2.68681in" /></p>
+<p><strong>6. Building the Circuit</strong></p>
+<p><strong>Click on ‘+’ sign to add</strong></p>
+<p><img src="/days/media/w2d4/image7.png"
+style="width:6.26806in;height:2.16528in" /></p>
+<ol type="1">
+<li><p><strong>A red LED</strong></p></li>
+</ol>
+<p><img src="/days/media/w2d4/image8.png"
+style="width:6.26806in;height:1.99861in" /></p>
+<ol start="2" type="1">
+<li><p><strong>A current-limiting resistor</strong></p></li>
+</ol>
+<p><img src="/days/media/w2d4/image9.png"
+style="width:6.26806in;height:2.42708in" /></p>
+<p>Connected the LED to the ESP32 GPIO pin (project target: GPIO 4).</p>
+<p>Important</p>
+<p>Pin mismatch noticed</p>
+<p>The objective mentions GPIO 4, but the code below uses pin 14. To
+truly blink an LED on GPIO 4, replace every 14 with 4.</p>
+<p><strong>7. Programming the LED Blink</strong></p>
+<p>Wrote the following code to toggle the LED every second:</p>
+<p>The program repeatedly turns the LED ON for one second and OFF for
+one second.</p>
+<p><img src="/days/media/w2d4/image10.png"
+style="width:6.26806in;height:3.54444in" /></p>
+<p><strong>Phase 3: Testing &amp; Verification</strong></p>
+<p><strong>8. Running the Simulation</strong></p>
+<p>Started the Wokwi simulator and observed the LED blinking
+continuously.</p>
+<p>This confirmed that:</p>
+<ol type="1">
+<li><p>The circuit wiring was correct.</p></li>
+<li><p>The ESP32 GPIO pin was configured properly.</p></li>
+<li><p>The software logic was functioning as expected.</p></li>
+</ol>
+<p>This step demonstrated how ESP32 digital output pins can control
+external components such as LEDs.<img
+src="/days/media/w2d4/image11.png"
+style="width:6.26806in;height:3.04375in" /></p>
+<p><strong>Learning Outcomes</strong></p>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 43%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Learning</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wokwi setup</td>
+<td>Simulator navigation</td>
+<td>ESP32 environment ready</td>
+</tr>
+<tr>
+<td>Board selection</td>
+<td>Virtual hardware configuration</td>
+<td>ESP32 project created</td>
+</tr>
+<tr>
+<td>Circuit design</td>
+<td>GPIO and component connections</td>
+<td>Functional LED circuit</td>
+</tr>
+<tr>
+<td>LED Blink code</td>
+<td>Digital output programming</td>
+<td>LED blinking achieved</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall Outcome</strong></p>
+<ol type="1">
+<li><p>Successfully explored and configured the Wokwi ESP32
+simulator.</p></li>
+<li><p>Built an ESP32 LED circuit using a GPIO output pin.</p></li>
+<li><p>Verified LED blinking through virtual simulation.</p></li>
+</ol>
+<p><strong>Conclusion</strong></p>
+<p>This exercise covered the complete development cycle: simulation,
+circuit design, coding, testing, documentation, and version control.
+Using Wokwi, an ESP32 LED Blink project was created and validated in a
+virtual environment.Making the project organized, reproducible, and easy
+to share with others. The screen recording serves as final verification
+of successful implementation.</p>
+
+    </article>
+    <a class="back back-bottom" href="/#internship">← Back to main page</a>
+  </div>
+</body>
+</html>

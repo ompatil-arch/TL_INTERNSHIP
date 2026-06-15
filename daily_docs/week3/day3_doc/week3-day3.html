@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Week 3 Day 3 — Firebase on LED | Om Patil</title>
+<link rel="stylesheet" href="/days/_style.css" />
+</head>
+<body>
+  <div class="doc-container">
+    <a class="back" href="/#internship">← Back to main page</a>
+    <header class="doc-head">
+      <p class="kicker">Week 3 — Summer Internship</p>
+      <h1>Day 4 — Firebase on LED</h1>
+      <p class="tagline">Controlling an LED with Firebase Realtime Database and ESP32</p>
+    </header>
+    <article class="docx-content">
+<p>Documentation of Firebase on LED</p>
+<p>Firebase is a platform by Google that helps developers build, run,
+and grow web and mobile applications without managing much backend
+infrastructure.</p>
+<p>How to Create Use Firebase?</p>
+<p>Step 1: Search Firebase on Google Chrome or Microsoft Edge</p>
+<p><img src="/days/media/w3d3/image1.png"
+style="width:6.26806in;height:1.68125in" /></p>
+<p>Step 2: Click on the link</p>
+<p><img src="/days/media/w3d3/image2.png"
+style="width:6.26806in;height:1.11458in" /></p>
+<p>Step 3: Open console in another tab by clicking on it</p>
+<p><img src="/days/media/w3d3/image3.png"
+style="width:6.26806in;height:2.74375in" /></p>
+<p>Step 4: Click on the Get started by setting up a Firebase project</p>
+<p><img src="/days/media/w3d3/image4.png"
+style="width:6.26806in;height:2.95in" /></p>
+<p>Step 5: Type name for your project</p>
+<p><img src="/days/media/w3d3/image5.png"
+style="width:6.26806in;height:3.10764in" /></p>
+<p>Allow AI assistance to help It helps us during project by adding more
+details and ideas</p>
+<p><img src="/days/media/w3d3/image6.png"
+style="width:6.26806in;height:4.37708in" /></p>
+<p>Step 6: After Creating project click on Authentication from
+Security</p>
+<p><img src="/days/media/w3d3/image7.png"
+style="width:6.26806in;height:4.98681in" /></p>
+<p>Step 7: click on get started</p>
+<p><img src="/days/media/w3d3/image8.png"
+style="width:6.26806in;height:2.75278in" /></p>
+<h3
+id="step-8-get-started-with-firebase-authentication-by-adding-your-first-sign-in-method">Step
+8: Get started with Firebase Authentication by adding your first sign-in
+method</h3>
+<h3 id="section"><img src="/days/media/w3d3/image9.png"
+style="width:6.26806in;height:2.60625in" /></h3>
+<h3 id="step-9-enable-permission-and-enter-you-e-mail-and-save-it">Step
+9: Enable permission and enter you e-mail and save it</h3>
+<h3 id="section-1"><img src="/days/media/w3d3/image10.png"
+style="width:6.26806in;height:4.69375in" /></h3>
+<h3
+id="step-10-now-select-real-time-database-from-database-and-storage">Step
+10: Now select real time database from database and storage </h3>
+<h3 id="section-2"><img src="/days/media/w3d3/image11.png"
+style="width:6.26806in;height:1.72153in" /></h3>
+<h3 id="step-11-now-click-on-create-database">Step 11: Now click on
+create database</h3>
+<h3 id="section-3"><img src="/days/media/w3d3/image12.png"
+style="width:6.26806in;height:2.91597in" /></h3>
+<h3 id="section-4"></h3>
+<h3
+id="step-12-select-singapore-in-the-below-option-or-any-of-those-which-is-nearer-from-your-location">Step
+12: Select Singapore in the below option or any of those which is nearer
+from your location</h3>
+<h3 id="section-5"><img src="/days/media/w3d3/image13.png"
+style="width:6.26806in;height:3.35486in" /></h3>
+<p>Step 13: Select start in test mode and click on enable</p>
+<p><img src="/days/media/w3d3/image14.png"
+style="width:6.26806in;height:5.60278in" /></p>
+<p>Step 14: you will get results like this</p>
+<p><img src="/days/media/w3d3/image15.png"
+style="width:6.26806in;height:0.86389in" /></p>
+<p>Step 15: Now go to settings and select general</p>
+<p><img src="/days/media/w3d3/image16.png"
+style="width:6.26806in;height:2.04792in" /></p>
+<p>Step 16: Now select service accounts</p>
+<p><img src="/days/media/w3d3/image17.png"
+style="width:6.26806in;height:0.70764in" /></p>
+<p>Step 17: Select any Admin SDK configuration snippet and click on
+generate new private key</p>
+<p><img src="/days/media/w3d3/image18.png"
+style="width:6.26806in;height:4.09861in" /></p>
+<p>Step 18: Now click on database secrets</p>
+<p><img src="/days/media/w3d3/image18.png"
+style="width:6.26806in;height:4.09861in" /></p>
+<p>Step 19: Now copy the key</p>
+<p><img src="/days/media/w3d3/image19.png"
+style="width:6.26806in;height:3.00764in" /></p>
+<p>Step 20: Now go to general and select general</p>
+<p><img src="/days/media/w3d3/image20.png"
+style="width:6.26806in;height:3.67917in" /></p>
+<p>Step 21: Scroll down and select web</p>
+<p><img src="/days/media/w3d3/image21.png"
+style="width:6.26806in;height:2.19583in" /></p>
+<p>Step 22: Add Nickname to your app click on register app</p>
+<p><img src="/days/media/w3d3/image22.png"
+style="width:6.26806in;height:3.44583in" /></p>
+<p>Step 23: Get API key from here</p>
+<p><img src="/days/media/w3d3/image23.png"
+style="width:6.26806in;height:5.62778in" /></p>
+<p>Step 24: Now open Arduino IDE</p>
+<p><img src="/days/media/w3d3/image24.png"
+style="width:6.26806in;height:5.18958in" /></p>
+<p>Step 25: Select Board</p>
+<p><img src="/days/media/w3d3/image25.png"
+style="width:6.26806in;height:3.27431in" /></p>
+<p>Step 26: select COM 3</p>
+<p><img src="/days/media/w3d3/image26.png"
+style="width:6.26806in;height:4.43333in" /></p>
+<p>Step 27: Download ESP32</p>
+<p><img src="/days/media/w3d3/image27.png"
+style="width:6.26806in;height:2.90486in" /></p>
+<p>Step 28: Now write the given code in Arduino IDE</p>
+<p><img src="/days/media/w3d3/image28.png"
+style="width:6.26806in;height:1.67153in" /></p>
+<p>Step 29: now change</p>
+<p>1.WiFi_SSID with your mobile hotspot name</p>
+<p>2.WiFi_password with your mobile hotspot name</p>
+<p>3.change Database URL with your real time database URL</p>
+<p><img src="/days/media/w3d3/image29.png"
+style="width:6.26806in;height:1.74306in" /></p>
+<p>4.Change your database secret with your database secret</p>
+<p><img src="/days/media/w3d3/image30.png"
+style="width:6.26806in;height:2.90208in" /></p>
+<p>5.If you are inserting negative terminal of LED to the D4 then write
+4 in the LED_PIN</p>
+<p><img src="/days/media/w3d3/image31.png"
+style="width:6.26806in;height:3.24653in" /></p>
+<p>Upload the program</p>
+<p><img src="/days/media/w3d3/image32.png"
+style="width:6.26806in;height:5.2in" /></p>
+<p>Final result</p>
+<p><img src="/days/media/w3d3/image33.png"
+style="width:5.33408in;height:7.15725in" /></p>
+<p>CONCLUSION</p>
+<p>Using Firebase to control an LED through a website demonstrated how
+cloud-based platforms can enable real-time communication between web
+applications and hardware devices. Firebase acted as an efficient bridge
+between the website and the microcontroller, allowing LED states to be
+updated instantly without the need for a dedicated server. This project
+helped in understanding concepts such as cloud databases, real-time data
+synchronization, and IoT integration. Overall, Firebase simplified the
+development process and provided a reliable solution for remotely
+controlling hardware devices through a web interface.</p>
+    </article>
+  </div>
+</body>
+</html>
