@@ -1,786 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Om Patil | Summer Internship Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-M31gIJmq9K+E7jvCejaFtV38l6zJj5w2tMjXyM6JCshE2m7e91t9Nytp5H7hY7dZdFZg0ZxBc3AGM8SFYx2O8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio & Internship Docs · CSE</title>
+  <!-- Google Font + Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    :root {
-      --bg: #081a33;
-      --surface: #0f254f;
-      --surface-alt: #162f68;
-      --accent: #2d8cff;
-      --accent-soft: rgba(45, 140, 255, 0.12);
-      --text: #f6f8ff;
-      --muted: #a8bbd7;
-      --border: rgba(255, 255, 255, 0.08);
-      --shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
-      font-family: 'Inter', sans-serif;
-    }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      min-height: 100vh;
-      background: radial-gradient(circle at top left, rgba(45, 140, 255, 0.16), transparent 28%),
-        linear-gradient(180deg, #071125 0%, #081a33 100%);
-      color: var(--text);
-      font-size: 16px;
-      line-height: 1.65;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fc;
+      color: #1e2a3e;
+      transition: background 0.3s, color 0.3s;
+      scroll-behavior: smooth;
+      line-height: 1.6;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
+    body.dark {
+      background: #121a26;
+      color: #e8edf3;
     }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    button,
-    .button {
-      cursor: pointer;
-      transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    button:hover,
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
     .container {
-      width: min(1180px, calc(100% - 2.2rem));
+      max-width: 1200px;
       margin: 0 auto;
+      padding: 0 20px;
     }
-
-    header {
-      position: sticky;
+    /* ----- Navbar ----- */
+    .navbar {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      padding: 12px 0;
+      position: fixed;
       top: 0;
-      z-index: 50;
-      backdrop-filter: blur(18px);
-      background: rgba(8, 26, 51, 0.88);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      width: 100%;
+      z-index: 999;
+      transition: background 0.3s;
     }
-
-    .nav-inner {
+    body.dark .navbar {
+      background: rgba(18, 26, 38, 0.9);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .nav-flex {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 1rem;
-      padding: 1rem 0;
-    }
-
-    .brand {
-      display: flex;
       align-items: center;
-      gap: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: var(--text);
-    }
-
-    .brand span {
-      display: inline-block;
-      background: var(--accent);
-      color: #081a33;
-      padding: 0.55rem 0.7rem;
-      border-radius: 0.75rem;
-      font-size: 0.95rem;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 1.4rem;
       flex-wrap: wrap;
     }
-
-    nav a {
-      color: var(--muted);
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
       font-size: 0.95rem;
-      transition: color 0.2s ease;
+      color: #1e2a3e;
+      transition: 0.2s;
     }
-
-    nav a:hover,
-    nav a.active {
-      color: var(--text);
+    body.dark .nav-links a {
+      color: #d0dcec;
     }
-
-    .menu-toggle {
-      display: none;
+    .nav-links a:hover {
+      color: #0066cc;
+    }
+    .dark-toggle {
+      background: #e2e8f0;
       border: none;
-      background: transparent;
-      color: var(--text);
-      font-size: 1.35rem;
+      border-radius: 30px;
+      padding: 8px 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
     }
-
+    body.dark .dark-toggle {
+      background: #2a3a50;
+      color: #f0f4fa;
+    }
+    /* ----- Hero ----- */
     .hero {
-      min-height: calc(100vh - 88px);
-      display: grid;
-      align-items: center;
-      padding: 4rem 0 5rem;
-      gap: 2rem;
-    }
-
-    .hero-grid {
-      display: grid;
-      gap: 2rem;
-    }
-
-    .hero-copy {
-      max-width: 640px;
-    }
-
-    .hero-copy h1 {
-      font-size: clamp(3rem, 5vw, 4.4rem);
-      line-height: 0.95;
-      margin-bottom: 1rem;
-      letter-spacing: -0.05em;
-    }
-
-    .hero-copy p.subtitle,
-    .hero-copy p.intro {
-      color: var(--muted);
-    }
-
-    .hero-copy p.subtitle {
-      margin-bottom: 0.9rem;
-      font-weight: 600;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 0.88rem;
-    }
-
-    .hero-copy p.intro {
-      margin-bottom: 2rem;
-      font-size: 1.03rem;
-    }
-
-    .hero-actions {
+      padding: 130px 0 60px;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 1rem;
+      gap: 30px;
+      position: relative;
+    }
+    .hero-content {
+      flex: 1 1 300px;
+    }
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .hero-content .sub {
+      font-size: 1.1rem;
+      color: #2c4b6f;
+      margin-bottom: 12px;
+    }
+    body.dark .hero-content .sub { color: #b0c8e0; }
+    .hero-content p {
+      margin: 16px 0;
+      max-width: 500px;
+    }
+    .social-icons a {
+      font-size: 1.7rem;
+      margin-right: 18px;
+      color: #1e2a3e;
+      transition: 0.2s;
+    }
+    body.dark .social-icons a { color: #d0dcec; }
+    .social-icons a:hover { color: #0066cc; transform: scale(1.1); }
+    .hero-images {
+      flex: 1 1 280px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
       flex-wrap: wrap;
     }
-
-    .button.primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.65rem;
-      padding: 1rem 1.8rem;
-      border-radius: 999px;
-      border: none;
-      background: var(--accent);
-      color: #081a33;
-      font-weight: 700;
-      box-shadow: 0 18px 40px rgba(45, 140, 255, 0.27);
-    }
-
-    .hero-info {
-      display: grid;
-      gap: 1.2rem;
-      padding: 2.2rem;
-      border-radius: 1.35rem;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-info li {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      color: var(--text);
-      font-size: 0.97rem;
-    }
-
-    .hero-info li i {
-      color: var(--accent);
-      width: 1.7rem;
+    .hero-img-card {
+      background: white;
+      border-radius: 30px;
+      padding: 10px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+      width: 180px;
       text-align: center;
-      font-size: 1.1rem;
     }
-
-    section {
-      padding: 5rem 0;
+    body.dark .hero-img-card { background: #1f2c3d; }
+    .hero-img-card img {
+      width: 100%;
+      border-radius: 24px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      background: #ccc;
     }
-
-    section h2 {
-      margin-bottom: 1.2rem;
-      font-size: clamp(2.1rem, 3vw, 2.6rem);
-      letter-spacing: -0.03em;
-    }
-
-    section p.section-intro {
-      max-width: 720px;
-      color: var(--muted);
-      margin-bottom: 2rem;
-      font-size: 1rem;
-    }
-
-    .grid {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .cards {
-      display: grid;
-      gap: 1.4rem;
-    }
-
-    .card,
-    .skill-card,
-    .timeline-card,
-    .contact-card {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 1.35rem;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
-      padding: 1.8rem;
-      transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-    }
-
-    .card:hover,
-    .skill-card:hover,
-    .contact-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(45, 140, 255, 0.35);
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .about-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      align-items: stretch;
-      gap: 1.8rem;
-    }
-
-    .about-text {
-      display: grid;
-      gap: 1.1rem;
-    }
-
-    .about-list {
-      list-style: none;
-      display: grid;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .about-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.9rem;
-      color: var(--muted);
-    }
-
-    .about-list li i {
-      color: var(--accent);
-      margin-top: 0.2rem;
-    }
-
-    .skill-grid {
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    }
-
-    .skill-card {
-      display: grid;
-      gap: 1.1rem;
-    }
-
-    .skill-card span {
-      font-size: 1.75rem;
-      width: 3rem;
-      height: 3rem;
-      display: grid;
-      place-items: center;
-      background: rgba(45, 140, 255, 0.14);
-      border-radius: 1rem;
-      color: var(--accent);
-    }
-
-    .skill-card h3 {
-      font-size: 1.05rem;
-      margin-top: 0.2rem;
-    }
-
-    .doc-grid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .doc-card {
-      display: flex;
-      flex-direction: column;
-      gap: 1.15rem;
-      min-height: 300px;
-    }
-
-    .doc-card h3 {
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
-    }
-
-    .doc-card ul {
-      list-style: none;
-      display: grid;
-      gap: 0.8rem;
-      flex-grow: 1;
-      color: var(--muted);
-    }
-
-    .doc-card li {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-    }
-
-    .doc-card li i {
-      width: 1.25rem;
-      text-align: center;
-      color: var(--accent);
-    }
-
-    .doc-card .button-group {
-      display: grid;
-      gap: 0.85rem;
-      align-self: end;
-    }
-
-    .doc-card .button.secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      padding: 0.95rem 1.25rem;
-      border-radius: 0.95rem;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--text);
+    .typing {
       font-weight: 600;
+      color: #0066cc;
     }
-
-    .timeline {
-      position: relative;
-      padding-left: 1rem;
+    /* sections */
+    section {
+      padding: 60px 0 40px;
     }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 1.25rem;
-      top: 0.6rem;
-      bottom: 0;
-      width: 3px;
-      background: rgba(45, 140, 255, 0.18);
-      border-radius: 999px;
+    .section-title {
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      border-left: 8px solid #0066cc;
+      padding-left: 20px;
     }
-
-    .timeline-card {
-      position: relative;
-      padding-left: 3.6rem;
-      border-radius: 1.25rem;
-    }
-
-    .timeline-card::before {
-      content: '';
-      position: absolute;
-      left: 1rem;
-      top: 1.4rem;
-      width: 1rem;
-      height: 1rem;
-      border-radius: 50%;
-      background: var(--accent);
-      border: 3px solid var(--surface);
-    }
-
-    .timeline-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.55rem;
-    }
-
-    .timeline-card p {
-      color: var(--muted);
-    }
-
-    .contact-grid {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .contact-card {
+    /* cards */
+    .skills-grid, .edu-grid, .gallery-grid {
       display: grid;
-      gap: 1rem;
-      align-items: start;
+      grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+      gap: 20px;
     }
-
-    .contact-card i {
-      color: var(--accent);
-      font-size: 1.4rem;
-    }
-
-    .contact-card h3 {
-      font-size: 1.05rem;
-    }
-
-    .contact-card a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .footer {
+    .skill-card {
+      background: white;
+      padding: 20px 12px;
+      border-radius: 20px;
       text-align: center;
-      padding: 2rem 0 1rem;
-      color: var(--muted);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.02);
+      transition: 0.2s;
+      border: 1px solid #e9eef3;
     }
-
-    @media (max-width: 900px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-      .hero {
-        min-height: auto;
-      }
+    body.dark .skill-card { background: #1f2c3d; border-color: #2d4057; }
+    .skill-card i { font-size: 2.4rem; color: #0066cc; margin-bottom: 6px; }
+    .skill-card:hover { transform: translateY(-6px); box-shadow: 0 16px 28px rgba(0,0,0,0.06); }
+    .edu-card {
+      background: white;
+      padding: 24px;
+      border-radius: 24px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.02);
+      border: 1px solid #e9eef3;
     }
-
-    @media (max-width: 760px) {
-      .nav-inner {
-        flex-wrap: wrap;
-      }
-      nav {
-        width: 100%;
-        justify-content: space-between;
-      }
-      .menu-toggle {
-        display: inline-flex;
-      }
-      .nav-links {
-        width: 100%;
-        display: none;
-        flex-direction: column;
-        gap: 0.9rem;
-        margin-top: 0.85rem;
-      }
-      .nav-links.open {
-        display: flex;
-      }
-      nav a {
-        font-size: 1rem;
-      }
-      .hero {
-        padding-top: 3rem;
-      }
-      .hero-info,
-      .doc-card,
-      .contact-card {
-        padding: 1.5rem;
-      }
-      .timeline {
-        padding-left: 0.5rem;
-      }
-      .timeline-card {
-        padding-left: 2.4rem;
-      }
+    body.dark .edu-card { background: #1f2c3d; border-color: #2d4057; }
+    /* accordion */
+    .accordion {
+      margin-top: 20px;
     }
-
-    @media (max-width: 520px) {
-      .hero-copy h1 {
-        font-size: 2.8rem;
-      }
-      .hero-copy p.intro {
-        font-size: 1rem;
-      }
-      .button.primary,
-      .button.secondary {
-        width: 100%;
-      }
+    .accordion-item {
+      background: white;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      border: 1px solid #e9eef3;
+      overflow: hidden;
+      transition: 0.2s;
+    }
+    body.dark .accordion-item { background: #1a2636; border-color: #2d4057; }
+    .accordion-header {
+      padding: 18px 24px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8faff;
+      transition: 0.2s;
+    }
+    body.dark .accordion-header { background: #1f2c3d; }
+    .accordion-header:hover { background: #eef4fc; }
+    body.dark .accordion-header:hover { background: #2a3a50; }
+    .accordion-header i { transition: 0.2s; }
+    .accordion-body {
+      padding: 0 24px 24px;
+      display: none;
+    }
+    .accordion-body.active { display: block; }
+    .accordion-body p, .accordion-body li { margin-bottom: 10px; }
+    .accordion-body ul { padding-left: 20px; }
+    .day-card {
+      background: #f8fbff;
+      border-radius: 16px;
+      padding: 18px;
+      margin-top: 16px;
+      border-left: 4px solid #0066cc;
+    }
+    body.dark .day-card { background: #1e2b3b; }
+    .img-placeholder {
+      background: #d9e2ec;
+      border-radius: 16px;
+      padding: 30px 10px;
+      text-align: center;
+      color: #2c4b6f;
+      margin: 12px 0;
+    }
+    body.dark .img-placeholder { background: #283748; color: #b0c8e0; }
+    .gallery-grid img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 24px;
+      background: #ccc;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.04);
+    }
+    .contact-info p i { width: 30px; color: #0066cc; }
+    footer {
+      background: #eef3f9;
+      padding: 30px 0;
+      text-align: center;
+      border-radius: 40px 40px 0 0;
+    }
+    body.dark footer { background: #131e2b; }
+    .back-top {
+      display: inline-block;
+      margin-top: 16px;
+      background: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-top:hover { background: #004d99; }
+    @media (max-width: 700px) {
+      .hero { flex-direction: column; text-align: center; }
+      .hero-content p { margin-left: auto; margin-right: auto; }
+      .nav-links { gap: 12px; justify-content: center; }
+      .nav-flex { flex-direction: column; gap: 10px; }
     }
   </style>
 </head>
 <body>
-  <header class="container">
-    <div class="nav-inner">
-      <a class="brand" href="#hero">
-        <span>OP</span>
-        <div>
-          <div>Om Patil</div>
-          <small>Summer Internship Portfolio</small>
-        </div>
-      </a>
-      <button class="menu-toggle" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav>
-        <div class="nav-links">
-          <a class="active" href="#hero">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#documentation">Documentation</a>
-          <a href="#timeline">Journey</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <div class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#internship">Internship</a>
+        <a href="#sessions">Sessions</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="dark-toggle" id="darkToggle"><i class="fas fa-moon"></i> Dark</button>
     </div>
-  </header>
+  </nav>
 
-  <main class="container">
-    <section id="hero" class="hero">
-      <div class="hero-copy">
-        <p class="subtitle">Computer Science and Engineering Student</p>
-        <h1>Om Patil</h1>
-        <p class="intro">I am a Computer Science and Engineering student at Sanjivani University passionate about IoT, Embedded Systems, CAD Design, Programming, and Web Development. This portfolio showcases my summer internship journey, project work, technical documentation, and learning experiences.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#documentation"><i class="fas fa-rocket"></i>View Internship Journey</a>
-          <a class="button secondary" href="#timeline"><i class="fas fa-calendar-check"></i>See Timeline</a>
+  <!-- HERO -->
+  <section id="hero" class="hero container">
+    <div class="hero-content">
+      <h1>Your Name</h1>
+      <div class="sub">B.Tech Computer Science and Engineering Student at Sanjivani University</div>
+      <p><span class="typing" id="typedText"></span></p>
+      <p>Passionate about IoT, software & web development, electronics, and innovation. Building smart solutions.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-images">
+      <div class="hero-img-card"><img src="profile.jpg" alt="Profile"></div>
+      <div class="hero-img-card"><img src="university.jpg" alt="University"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="container">
+    <h2 class="section-title">About Me</h2>
+    <p style="max-width:700px;">I am a Computer Science Engineering student with a deep interest in IoT, software development, and web technologies. I love building projects that integrate hardware and software, and I constantly explore emerging technologies. My academic journey has fueled my passion for innovation and problem-solving.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="container">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fas fa-cube"></i><div>CAD Design</div></div>
+      <div class="skill-card"><i class="fas fa-cubes"></i><div>3D Designing</div></div>
+      <div class="skill-card"><i class="fas fa-code"></i><div>Coding</div></div>
+      <div class="skill-card"><i class="fab fa-html5"></i><div>HTML</div></div>
+      <div class="skill-card"><i class="fab fa-css3-alt"></i><div>CSS</div></div>
+      <div class="skill-card"><i class="fab fa-js"></i><div>JavaScript</div></div>
+      <div class="skill-card"><i class="fab fa-git-alt"></i><div>Git & GitHub</div></div>
+      <div class="skill-card"><i class="fas fa-microchip"></i><div>ESP32</div></div>
+      <div class="skill-card"><i class="fas fa-wifi"></i><div>IoT</div></div>
+      <div class="skill-card"><i class="fas fa-database"></i><div>Firebase</div></div>
+      <div class="skill-card"><i class="fas fa-bolt"></i><div>Basic Electronics</div></div>
+      <div class="skill-card"><i class="fas fa-file-alt"></i><div>Documentation</div></div>
+      <div class="skill-card"><i class="fas fa-lightbulb"></i><div>Problem Solving</div></div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <h3>B.Tech Computer Science and Engineering</h3>
+        <p><i class="fas fa-university"></i> Sanjivani University</p>
+        <p><i class="fas fa-calendar-alt"></i> 2022 – 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERNSHIP DOCUMENTATION -->
+  <section id="internship" class="container">
+    <h2 class="section-title">Summer Internship Documentation</h2>
+    <div class="accordion">
+      <!-- Week 1 -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-calendar-week"></i> WEEK 1</span> <i class="fas fa-chevron-down"></i></div>
+        <div class="accordion-body">
+          <div class="day-card"><strong>Day 1</strong> · Date: 01/06/2025<br>Objectives: Onboarding, environment setup.<br>Activities: Installed tools, cloned repos.<br>Tools: Git, VS Code.<br>Learning: Project structure.<br><div class="img-placeholder"><i class="fas fa-image"></i> Image placeholder</div>Conclusion: Ready for development.</div>
+          <div class="day-card"><strong>Day 2</strong> · Date: 02/06/2025<br>Objectives: Understand codebase.<br>Activities: Code walkthrough.<br>Tools: ESP32, Arduino IDE.<br>Learning: GPIO, sensors.<br><div class="img-placeholder"><i class="fas fa-image"></i> Image placeholder</div>Conclusion: Basics clear.</div>
+          <div class="day-card"><strong>Day 3</strong> · Date: 03/06/2025<br>Objectives: Write first module.<br>Activities: Implement UART.<br>Tools: ESP32, Serial.<br>Learning: Serial communication.<br><div class="img-placeholder"><i class="fas fa-image"></i> Image placeholder</div>Conclusion: Module works.</div>
+          <div class="day-card"><strong>Day 4</strong> · Date: 04/06/2025<br>Objectives: Integrate with Firebase.<br>Activities: Firebase setup.<br>Tools: Firebase, ESP32.<br>Learning: Realtime DB.<br><div class="img-placeholder"><i class="fas fa-image"></i> Image placeholder</div>Conclusion: Data sent.</div>
+          <div class="day-card"><strong>Day 5</strong> · Date: 05/06/2025<br>Objectives: Test & debug.<br>Activities: Stress testing.<br>Tools: Serial monitor.<br>Learning: Error handling.<br><div class="img-placeholder"><i class="fas fa-image"></i> Image placeholder</div>Conclusion: Stable version.</div>
         </div>
       </div>
-      <div class="hero-info">
-        <li><i class="fas fa-university"></i> Sanjivani University | B.Tech CSE</li>
-        <li><i class="fas fa-lightbulb"></i> Passion for technology, innovation, and practical systems</li>
-        <li><i class="fas fa-cogs"></i> Experience with IoT, embedded systems, and documentation workflows</li>
-        <li><i class="fas fa-brain"></i> Driven by continuous learning and solving real-world problems</li>
-      </div>
-    </section>
-
-    <section id="about">
-      <h2>About Me</h2>
-      <p class="section-intro">I am a dedicated CSE student with an eye for innovation, a hands-on approach to embedded systems, and a strong commitment to learning through real projects.</p>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>As a Computer Science and Engineering student at Sanjivani University, I enjoy building intuitive systems and turning technical ideas into practical solutions. My interests include electronics, programming, CAD design, and web development.</p>
-          <ul class="about-list">
-            <li><i class="fas fa-check-circle"></i> CSE student at Sanjivani University with academic and practical strength</li>
-            <li><i class="fas fa-check-circle"></i> Interest in technology, innovation, and interdisciplinary learning</li>
-            <li><i class="fas fa-check-circle"></i> Hands-on experience with IoT and Embedded Systems tools</li>
-            <li><i class="fas fa-check-circle"></i> Passion for continuous learning, documentation, and solving challenges</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Professional Focus</h3>
-          <p>My internship documentation portfolio highlights my weekly progress, project development, and the technical knowledge I gained while working on embedded systems, IoT integration, and web-based documentation.</p>
-          <div class="card-details">
-            <p><strong>University:</strong> Sanjivani University</p>
-            <p><strong>Program:</strong> Computer Science and Engineering</p>
-            <p><strong>Focus Areas:</strong> IoT, Embedded Systems, CAD Design, Programming, Web Development</p>
-          </div>
+      <!-- Week 2 -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-calendar-week"></i> WEEK 2</span> <i class="fas fa-chevron-down"></i></div>
+        <div class="accordion-body">
+          <div class="day-card"><strong>Day 1</strong> · Date: 08/06/2025<br>Objectives: RFID integration.<br>Activities: Connect RFID module.<br>Tools: ESP32, RFID-RC522.<br>Learning: SPI protocol.<br><div class="img-placeholder"><i class="fas fa-image"></i> Image placeholder</div>Conclusion: RFID works.</div>
+          <div class="day-card"><strong>Day 2</strong> · Date: 09/06/2025<br>Objectives: Read UID.<br>Activities: Serial print UID.<br>Tools: ESP32, RFID.<br>Learning: UID extraction.<br><div class="img-placeholder"><i class="fas fa-image"></i> Image placeholder</div>Conclusion: UID read.</div>
+          <div class="day-card"><strong>Day 3</strong> · Date: 10/06/2025<br>Objectives: Google Sheets integration.<br>Activities: Apps Script setup.<br>Tools: Google Sheets, ESP32.<br>Learning: HTTP requests.<br><div class="img-placeholder"><i class="fas fa-image"></i> Image placeholder</div>Conclusion: Data logged.</div>
+          <div class="day-card"><strong>Day 4</strong> · Date: 11/06/2025<br>Objectives: Full system test.<br>Activities: End-to-end testing.<br>Tools: ESP32, RFID, Sheets.<br>Learning: System integration.<br><div class="img-placeholder"><i class="fas fa-image"></i> Image placeholder</div>Conclusion: System ready.</div>
         </div>
       </div>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <p class="section-intro">A modern portfolio needs a strong skillset. These are the technologies and capabilities I bring to internship projects and documentation work.</p>
-      <div class="grid skill-grid">
-        <div class="skill-card"><span><i class="fas fa-pencil-ruler"></i></span><h3>CAD Design</h3></div>
-        <div class="skill-card"><span><i class="fas fa-code"></i></span><h3>Programming & Coding</h3></div>
-        <div class="skill-card"><span><i class="fas fa-laptop-code"></i></span><h3>Web Designing</h3></div>
-        <div class="skill-card"><span><i class="fab fa-html5"></i></span><h3>HTML</h3></div>
-        <div class="skill-card"><span><i class="fab fa-css3-alt"></i></span><h3>CSS</h3></div>
-        <div class="skill-card"><span><i class="fab fa-js-square"></i></span><h3>JavaScript</h3></div>
-        <div class="skill-card"><span><i class="fas fa-code-branch"></i></span><h3>Git & GitHub</h3></div>
-        <div class="skill-card"><span><i class="fas fa-microchip"></i></span><h3>ESP32 Development</h3></div>
-        <div class="skill-card"><span><i class="fas fa-network-wired"></i></span><h3>Firebase</h3></div>
-        <div class="skill-card"><span><i class="fas fa-wifi"></i></span><h3>IoT Systems</h3></div>
-        <div class="skill-card"><span><i class="fas fa-file-alt"></i></span><h3>Documentation</h3></div>
-        <div class="skill-card"><span><i class="fas fa-lightbulb"></i></span><h3>Problem Solving</h3></div>
-      </div>
-    </section>
-
-    <section id="documentation">
-      <h2>Internship Documentation</h2>
-      <p class="section-intro">Explore the weekly internship reports, project details, and sessions attended during the summer program.</p>
-      <div class="grid doc-grid">
-        <div class="doc-card">
-          <h3>Week 1 Documentation</h3>
-          <ul>
-            <li><i class="fas fa-calendar-day"></i> Day 1</li>
-            <li><i class="fas fa-calendar-day"></i> Day 2</li>
-            <li><i class="fas fa-calendar-day"></i> Day 3</li>
-            <li><i class="fas fa-calendar-day"></i> Day 4</li>
-            <li><i class="fas fa-calendar-day"></i> Day 5</li>
-          </ul>
-          <div class="button-group">
-            <a class="button secondary" href="daily_docs/week1/day1_doc/day1.html">Day 1</a>
-            <a class="button secondary" href="daily_docs/week1/day2_doc/day2.html">Day 2</a>
-            <a class="button secondary" href="daily_docs/week1/day3_doc/day3.html">Day 3</a>
-            <a class="button secondary" href="daily_docs/week1/day4_doc/day4.html">Day 4</a>
-            <a class="button secondary" href="daily_docs/week1/day5_doc/day5.html">Day 5</a>
-          </div>
-        </div>
-
-        <div class="doc-card">
-          <h3>Week 2 Documentation</h3>
-          <ul>
-            <li><i class="fas fa-calendar-day"></i> Day 1</li>
-            <li><i class="fas fa-calendar-day"></i> Day 2</li>
-            <li><i class="fas fa-calendar-day"></i> Day 3</li>
-            <li><i class="fas fa-calendar-day"></i> Day 4</li>
-          </ul>
-          <div class="button-group">
-            <a class="button secondary" href="daily_docs/week2/day1_doc/week2-day1.html">Day 1</a>
-            <a class="button secondary" href="daily_docs/week2/day2_doc/week2-day2.html">Day 2</a>
-            <a class="button secondary" href="daily_docs/week2/day3_doc/week2-day3.html">Day 3</a>
-            <a class="button secondary" href="daily_docs/week2/day4_doc/week2-day4.html">Day 4</a>
-          </div>
-        </div>
-
-        <div class="doc-card">
-          <h3>Week 3 Documentation</h3>
-          <ul>
-            <li><i class="fas fa-calendar-day"></i> Day 1</li>
-            <li><i class="fas fa-calendar-day"></i> Day 2</li>
-            <li><i class="fas fa-calendar-day"></i> Day 3</li>
-          </ul>
-          <div class="button-group">
-            <a class="button secondary" href="daily_docs/week3/day1_doc/week3-day1.html">Day 1</a>
-            <a class="button secondary" href="daily_docs/week3/day2_doc/week3-day2.html">Day 2</a>
-            <a class="button secondary" href="daily_docs/week3/day3_doc/week3-day3.html">Day 3</a>
-          </div>
-        </div>
-
-        <div class="doc-card">
-          <h3>Project Documentation</h3>
-          <ul>
-            <li><i class="fas fa-microchip"></i> ESP32</li>
-            <li><i class="fas fa-id-card-alt"></i> RC522 RFID Module</li>
-            <li><i class="fas fa-database"></i> Firebase</li>
-            <li><i class="fas fa-file-code"></i> Google Apps Script</li>
-            <li><i class="fas fa-table"></i> Google Sheets</li>
-          </ul>
-          <div class="button-group">
-            <a class="button secondary" href="projects/project.html">View Project</a>
-          </div>
-        </div>
-
-        <div class="doc-card">
-          <h3>Sessions Attended</h3>
-          <ul>
-            <li><i class="fas fa-chalkboard-teacher"></i> Design Thinking Workshop</li>
-            <li><i class="fas fa-network-wired"></i> Digital Visibility & LinkedIn Session</li>
-            <li><i class="fas fa-balance-scale"></i> Intellectual Property Rights (IPR) Session</li>
-            <li><i class="fas fa-atom"></i> Emerging Technologies Session</li>
-          </ul>
-          <div class="button-group">
-            <a class="button secondary" href="daily_docs/session_doc/session1_doc/session-1.html">Session 1</a>
-            <a class="button secondary" href="daily_docs/session_doc/session2_doc/session-2.html">Session 2</a>
-            <a class="button secondary" href="daily_docs/session_doc/session3_doc/session-3.html">Session 3</a>
-            <a class="button secondary" href="daily_docs/session_doc/session4_doc/session-4.html">Session 4</a>
-          </div>
+      <!-- Week 3 -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-calendar-week"></i> WEEK 3</span> <i class="fas fa-chevron-down"></i></div>
+        <div class="accordion-body">
+          <div class="day-card"><strong>Day 1</strong> · Date: 14/06/2025<br>Objectives: Optimize code.<br>Activities: Refactor.<br>Tools: VS Code.<br>Learning: Code efficiency.<br><div class="img-placeholder"><i class="fas fa-image"></i> Image placeholder</div>Conclusion: Faster response.</div>
+          <div class="day-card"><strong>Day 2</strong> · Date: 15/06/2025<br>Objectives: Add LED indicators.<br>Activities: GPIO output.<br>Tools: ESP32, LEDs.<br>Learning: Visual feedback.<br><div class="img-placeholder"><i class="fas fa-image"></i> Image placeholder</div>Conclusion: UI improved.</div>
+          <div class="day-card"><strong>Day 3</strong> · Date: 16/06/2025<br>Objectives: Final documentation.<br>Activities: Write report.<br>Tools: Markdown.<br>Learning: Technical writing.<br><div class="img-placeholder"><i class="fas fa-image"></i> Image placeholder</div>Conclusion: Documentation done.</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="timeline">
-      <h2>Internship Journey Timeline</h2>
-      <p class="section-intro">A smart internship journey grows through learning, building, and documenting each step along the way.</p>
-      <div class="timeline">
-        <div class="timeline-card">
-          <h3>Week 1</h3>
-          <p>Fundamentals & Tools — building a foundation in electronics, embedded systems, and documentation best practices.</p>
-        </div>
-        <div class="timeline-card">
-          <h3>Week 2</h3>
-          <p>IoT & Cloud Integration — connecting ESP32, Firebase, and cloud services for smart system development.</p>
-        </div>
-        <div class="timeline-card">
-          <h3>Week 3</h3>
-          <p>Smart Attendance System Development — implementing a project with ESP32, RFID, and live data workflows.</p>
-        </div>
-        <div class="timeline-card">
-          <h3>Project Completion</h3>
-          <p>Documentation & Deployment — finalizing reports, presentation assets, and polished internship deliverables.</p>
+  <!-- SESSIONS -->
+  <section id="sessions" class="container">
+    <h2 class="section-title">Session Documentation</h2>
+    <div class="accordion">
+      <div class="accordion-item"><div class="accordion-header" onclick="toggleAccordion(this)"><span>Session 1: IoT Basics</span><i class="fas fa-chevron-down"></i></div><div class="accordion-body"><p><strong>Speaker:</strong> Dr. A. Sharma</p><p><strong>Key Concepts:</strong> MQTT, Sensors, Actuators.</p><p><strong>Notes:</strong> Introduction to IoT ecosystem.</p><div class="img-placeholder"><i class="fas fa-image"></i> Screenshot placeholder</div><p><strong>Conclusion:</strong> Foundation laid.</p></div></div>
+      <div class="accordion-item"><div class="accordion-header" onclick="toggleAccordion(this)"><span>Session 2: ESP32 Programming</span><i class="fas fa-chevron-down"></i></div><div class="accordion-body"><p><strong>Speaker:</strong> Mr. R. Patil</p><p><strong>Key Concepts:</strong> FreeRTOS, WiFi, BLE.</p><p><strong>Notes:</strong> Deep dive into ESP32 SDK.</p><div class="img-placeholder"><i class="fas fa-image"></i> Screenshot placeholder</div><p><strong>Conclusion:</strong> Proficient with ESP32.</p></div></div>
+      <div class="accordion-item"><div class="accordion-header" onclick="toggleAccordion(this)"><span>Session 3: Firebase & Cloud</span><i class="fas fa-chevron-down"></i></div><div class="accordion-body"><p><strong>Speaker:</strong> Ms. S. Desai</p><p><strong>Key Concepts:</strong> Firestore, Authentication.</p><p><strong>Notes:</strong> Real-time database usage.</p><div class="img-placeholder"><i class="fas fa-image"></i> Screenshot placeholder</div><p><strong>Conclusion:</strong> Cloud integration mastered.</p></div></div>
+      <div class="accordion-item"><div class="accordion-header" onclick="toggleAccordion(this)"><span>Session 4: Project Showcase</span><i class="fas fa-chevron-down"></i></div><div class="accordion-body"><p><strong>Speaker:</strong> Industry Expert</p><p><strong>Key Concepts:</strong> Presentation skills, demo.</p><p><strong>Notes:</strong> Presented smart attendance system.</p><div class="img-placeholder"><i class="fas fa-image"></i> Screenshot placeholder</div><p><strong>Conclusion:</strong> Feedback received.</p></div></div>
+    </div>
+  </section>
+
+  <!-- PROJECT DOCUMENTATION -->
+  <section id="projects" class="container">
+    <h2 class="section-title">Project Documentation</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)"><span>Smart Attendance System (ESP32 + RFID)</span><i class="fas fa-chevron-down"></i></div>
+        <div class="accordion-body">
+          <p><strong>Overview:</strong> RFID-based attendance system with Google Sheets & Firebase.</p>
+          <p><strong>Problem:</strong> Manual attendance is time-consuming and error-prone.</p>
+          <p><strong>Objectives:</strong> Automate attendance, reduce errors, real-time logging.</p>
+          <p><strong>Components:</strong> ESP32, RFID-RC522, LEDs, Buzzer, Breadboard.</p>
+          <div class="img-placeholder"><i class="fas fa-microchip"></i> Circuit Diagram placeholder</div>
+          <p><strong>Working:</strong> RFID reads UID, ESP32 verifies, logs to Sheets via Apps Script.</p>
+          <p><strong>Hardware:</strong> ESP32, RFID module, jumper wires.</p>
+          <p><strong>Software:</strong> Arduino IDE, Google Apps Script, Firebase.</p>
+          <p><strong>ESP32 Programming:</strong> SPI, WiFi, HTTPClient.</p>
+          <p><strong>Google Sheets Integration:</strong> Apps Script web app.</p>
+          <p><strong>Firebase:</strong> Realtime DB for backup.</p>
+          <p><strong>Results:</strong> 98% accuracy, real-time logging.</p>
+          <p><strong>Challenges:</strong> WiFi connectivity, RFID read range.</p>
+          <p><strong>Future Scope:</strong> Face recognition, mobile app.</p>
+          <p><strong>Conclusion:</strong> Successful and reliable system.</p>
+          <div class="img-placeholder"><i class="fas fa-image"></i> Project images placeholder</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="section-intro">Ready to connect about projects, internships, or collaboration opportunities.</p>
-      <div class="grid contact-grid">
-        <div class="contact-card">
-          <i class="fas fa-user"></i>
-          <h3>Name</h3>
-          <p>Om Patil</p>
-        </div>
-        <div class="contact-card">
-          <i class="fas fa-school"></i>
-          <h3>University</h3>
-          <p>Sanjivani University</p>
-        </div>
-        <div class="contact-card">
-          <i class="fab fa-github"></i>
-          <h3>GitHub</h3>
-          <a href="https://github.com/placeholder" target="_blank" rel="noreferrer">github.com/placeholder</a>
-        </div>
-        <div class="contact-card">
-          <i class="fab fa-linkedin"></i>
-          <h3>LinkedIn</h3>
-          <a href="https://linkedin.com/in/placeholder" target="_blank" rel="noreferrer">linkedin.com/in/placeholder</a>
-        </div>
-        <div class="contact-card">
-          <i class="fas fa-envelope"></i>
-          <h3>Email</h3>
-          <a href="mailto:om.patil@example.com">om.patil@example.com</a>
-        </div>
+  <!-- GALLERY -->
+  <section id="gallery" class="container">
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery-grid">
+      <img src="profile.jpg" alt="My Photo">
+      <img src="university.jpg" alt="University">
+      <img src="project1.jpg" alt="Internship activity">
+      <img src="project2.jpg" alt="Project photo">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-info" style="display:flex; flex-wrap:wrap; gap:30px;">
+      <div><p><i class="fas fa-user"></i> Your Name</p><p><i class="fas fa-envelope"></i> your.email@university.edu</p><p><i class="fas fa-phone"></i> +91 98765 43210</p></div>
+      <div><p><i class="fab fa-github"></i> github.com/yourhandle</p><p><i class="fab fa-linkedin"></i> linkedin.com/in/yourhandle</p><p><i class="fas fa-map-marker-alt"></i> Sanjivani University, India</p></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Your Name. All rights reserved.</p>
+      <div style="margin:10px 0;">
+        <a href="#" style="margin:0 10px; color:inherit;"><i class="fab fa-github"></i></a>
+        <a href="#" style="margin:0 10px; color:inherit;"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" style="margin:0 10px; color:inherit;"><i class="fas fa-envelope"></i></a>
       </div>
-    </section>
-  </main>
-
-  <footer class="footer container">
-    <p>© 2026 Om Patil | Summer Internship Portfolio | Sanjivani University</p>
+      <a href="#hero" class="back-top"><i class="fas fa-arrow-up"></i> Back to Top</a>
+    </div>
   </footer>
 
   <script>
-    const toggleButton = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const navAnchors = document.querySelectorAll('nav a');
-
-    toggleButton.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+    // Dark mode toggle
+    const toggle = document.getElementById('darkToggle');
+    toggle.addEventListener('click', function() {
+      document.body.classList.toggle('dark');
+      const icon = this.querySelector('i');
+      if (document.body.classList.contains('dark')) {
+        icon.className = 'fas fa-sun';
+        this.innerHTML = '<i class="fas fa-sun"></i> Light';
+      } else {
+        icon.className = 'fas fa-moon';
+        this.innerHTML = '<i class="fas fa-moon"></i> Dark';
+      }
     });
 
-    navAnchors.forEach((link) => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-      });
-    });
+    // Typing effect
+    const roles = ['IoT Enthusiast', 'Web Developer', 'CSE Student', 'Innovator'];
+    let idx = 0, charIdx = 0, isDeleting = false;
+    const typedEl = document.getElementById('typedText');
+    function typeEffect() {
+      const current = roles[idx];
+      if (!isDeleting) {
+        typedEl.textContent = current.slice(0, charIdx++);
+        if (charIdx > current.length) { isDeleting = true; setTimeout(typeEffect, 1500); return; }
+      } else {
+        typedEl.textContent = current.slice(0, charIdx--);
+        if (charIdx < 0) { isDeleting = false; idx = (idx + 1) % roles.length; charIdx = 0; }
+      }
+      setTimeout(typeEffect, isDeleting ? 70 : 120);
+    }
+    typeEffect();
 
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('section[id]');
-      const scrollY = window.pageYOffset;
-
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
-
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-          document.querySelectorAll('nav a').forEach((link) => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + sectionId) {
-              link.classList.add('active');
-            }
-          });
-        }
-      });
-    });
+    // Accordion toggle
+    function toggleAccordion(header) {
+      const body = header.nextElementSibling;
+      const icon = header.querySelector('.fa-chevron-down');
+      if (body.classList.contains('active')) {
+        body.classList.remove('active');
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        body.classList.add('active');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
   </script>
 </body>
 </html>
