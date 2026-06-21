@@ -1843,9 +1843,862 @@ of successful implementation.</p>
       <div class="accordion-item">
         <div class="accordion-header" onclick="toggleAccordion(this)"><span><i class="fas fa-calendar-week"></i> WEEK 3</span> <i class="fas fa-chevron-down"></i></div>
         <div class="accordion-body">
-          <div class="day-card"><strong>Day 1</strong></div>
-          <div class="day-card"><strong>Day 2</strong></div>
-          <div class="day-card"><strong>Day 3</strong></div>
+          <div class="day-card"><strong>Day 1</strong></div><!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Week 3 Day 1 — Summer Internship | Om Patil</title>
+<link rel="stylesheet" href="/days/_style.css" />
+<style>
+  /* Fix for images being cut off */
+  .docx-content img {
+    max-width: 100%;
+    height: auto !important;
+    display: block;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .docx-content p img,
+  .docx-content blockquote img {
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+  }
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  table th {
+    background: #0066cc;
+    color: white;
+  }
+  body.dark table th {
+    background: #1a3a5a;
+  }
+  body.dark table td {
+    border-color: #2d4057;
+  }
+</style>
+</head>
+<body>
+  <div class="doc-container">
+    <header class="doc-head">
+      <p class="kicker">Week 3 — Summer Internship</p>
+      <h1>Day 1</h1>
+      <p class="tagline">Physical AI, Edge Computing, Sensors, Motors, Arduino Boards and ESP32</p>
+    </header>
+    <article class="docx-content">
+<p><strong>Documentation on Physical AI, Edge Computing, Sensors,
+Motors, and Arduino Boards</strong></p>
+<p><strong>What is Physical AI?</strong></p>
+<p>Physical AI refers to the integration of Artificial Intelligence with
+physical devices, machines, and systems that can interact with the real
+world. Unlike traditional AI, which mainly works with digital data,
+Physical AI enables machines to perceive, analyse , and respond to their
+surroundings. It combines AI algorithms with sensors, actuators,
+robotics, and embedded systems. Physical AI is widely used in autonomous
+vehicles, industrial robots, drones, smart home devices, and healthcare
+equipment. These systems collect real-world data through sensors and
+process it to make intelligent decisions. The goal of Physical AI is to
+automate tasks, improve efficiency, and reduce human effort. With
+advancements in machine learning and edge computing, Physical AI is
+becoming more capable and reliable. It plays an important role in
+Industry 4.0 and the development of smart systems. Physical AI bridges
+the gap between the digital and physical worlds by enabling machines to
+act intelligently in real environments.</p>
+<img src="daily_docs/week3/day1_doc/image1.png" alt="Physical AI" />
+
+<p><strong>Difference Between Microcontroller and
+Microprocessor</strong></p>
+<p>Microcontrollers and microprocessors are both electronic devices used
+for computing, but they serve different purposes.</p>
+<p>A microcontroller is a compact integrated circuit designed for
+specific control-oriented applications. It contains a CPU, memory (RAM
+and ROM), and input/output peripherals on a single chip.
+Microcontrollers are commonly used in embedded systems such as washing
+machines, microwave ovens, robots, and IoT devices. They consume less
+power and are cost-effective.</p>
+<p>A microprocessor, on the other hand, is mainly the CPU of a computer
+system. It requires external memory and peripherals to function.
+Microprocessors are used in personal computers, laptops, servers, and
+advanced computing systems where high processing power is required. They
+can execute complex tasks and support advanced operating systems.</p>
+<img src="daily_docs/week3/day1_doc/image2.png" alt="Microcontroller vs Microprocessor" />
+
+<p><strong>Key Differences</strong></p>
+<table>
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Microcontroller</strong></th>
+<th style="text-align: center;"><strong>Microprocessor</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU, Memory, and I/O on a single chip</td>
+<td>CPU only; external components required</td>
+</tr>
+<tr>
+<td>Used in embedded systems</td>
+<td>Used in computers and high-performance systems</td>
+</tr>
+<tr>
+<td>Low power consumption</td>
+<td>Higher power consumption</td>
+</tr>
+<tr>
+<td>Cost-effective</td>
+<td>More expensive</td>
+</tr>
+<tr>
+<td>Suitable for specific tasks</td>
+<td>Suitable for complex processing tasks</td>
+</tr>
+<tr>
+<td>Examples: Arduino, PIC, ATmega328P</td>
+<td>Examples: Intel Core i5, AMD Ryzen</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Edge Computing</strong></p>
+<p><strong>Introduction</strong></p>
+<p>Edge Computing is a modern computing approach in which data
+processing takes place close to the source of data generation rather
+than sending all data to a centralized cloud server. The "edge" refers
+to devices such as sensors, microcontrollers, IoT devices, smartphones,
+cameras, and local servers that are located near the user or the data
+source.</p>
+<p>With the rapid growth of the Internet of Things (IoT), billions of
+devices generate large amounts of data every second. Sending all this
+data to the cloud can cause delays, increased bandwidth usage, and
+higher operational costs. Edge computing solves these problems by
+processing data locally.</p>
+<p><strong>Working of Edge Computing</strong></p>
+<img src="daily_docs/week3/day1_doc/image3.png" alt="Edge Computing Working" />
+
+<ol type="1">
+<li><p>Sensors and devices collect data from the environment.</p></li>
+<li><p>The data is processed at the edge device or a nearby edge
+server.</p></li>
+<li><p>Immediate decisions are made locally if required.</p></li>
+<li><p>Only important or summarized data is transmitted to the
+cloud.</p></li>
+<li><p>The cloud performs long-term storage and advanced
+analytics.</p></li>
+</ol>
+<p>For example, in a smart traffic system, cameras can process vehicle
+movement locally and adjust traffic signals instantly without waiting
+for cloud instructions.</p>
+<p><strong>Components of Edge Computing</strong></p>
+<p><strong>1. Edge Devices</strong></p>
+<p>These are devices that collect and process data.<br />
+Examples:</p>
+<ul>
+<li><p>Sensors</p></li>
+<li><p>Cameras</p></li>
+<li><p>Smartphones</p></li>
+<li><p>Arduino and Raspberry Pi boards</p></li>
+</ul>
+<p><strong>2. Edge Gateways</strong></p>
+<p>They act as intermediaries between edge devices and the cloud.</p>
+<p><strong>3. Edge Servers</strong></p>
+<p>Local servers that perform heavy computations near the data
+source.</p>
+<p><strong>4. Cloud Platform</strong></p>
+<p>Used for large-scale data storage and advanced analysis.</p>
+<p><strong>Advantages of Edge Computing</strong></p>
+<img src="daily_docs/week3/day1_doc/image4.png" alt="Advantages of Edge Computing" />
+
+<p><strong>Reduced Latency</strong></p>
+<p>Data is processed near the source, resulting in faster responses.</p>
+<p><strong>Improved Reliability</strong></p>
+<p>Systems can continue operating even if internet connectivity is
+limited.</p>
+<p><strong>Better Security</strong></p>
+<p>Sensitive data remains closer to the device instead of being
+continuously transmitted.</p>
+<p><strong>Lower Bandwidth Usage</strong></p>
+<p>Only essential data is sent to the cloud.</p>
+<p><strong>Real-Time Decision Making</strong></p>
+<p>Critical applications can respond instantly to changing
+conditions.</p>
+<p><strong>Applications of Edge Computing</strong></p>
+<p><strong>Smart Cities</strong></p>
+<p>Traffic monitoring, street lighting, and public safety systems.</p>
+<p><strong>Healthcare</strong></p>
+<p>Patient monitoring devices can analyze health data in real time.</p>
+<p><strong>Industrial Automation</strong></p>
+<p>Machines can detect faults and optimize performance instantly.</p>
+<p><strong>Autonomous Vehicles</strong></p>
+<p>Vehicles process sensor data locally to make driving decisions.</p>
+<p><strong>Smart Agriculture</strong></p>
+<p>Sensors monitor soil moisture, temperature, and crop health.</p>
+<p><strong>Smart Homes</strong></p>
+<p>Voice assistants and security systems process information
+quickly.</p>
+<p><strong>Challenges of Edge Computing</strong></p>
+<ul>
+<li><p>Limited computing resources on edge devices.</p></li>
+<li><p>Device management becomes difficult with large networks.</p></li>
+<li><p>Security risks if devices are not properly protected.</p></li>
+<li><p>Maintenance and updates require careful planning.</p></li>
+</ul>
+<p><strong>Conclusion</strong></p>
+<p>Edge Computing is transforming the way data is processed by bringing
+computation closer to where data is generated. It reduces latency,
+improves efficiency, and enables real-time decision-making. As IoT and
+smart technologies continue to grow, edge computing will play a major
+role in future intelligent systems.</p>
+<p><strong>Introduction to Sensors</strong></p>
+<p>A sensor is an electronic device that detects changes in the
+environment and converts them into electrical signals. Sensors help
+machines gather information about physical conditions such as
+temperature, light, distance, pressure, humidity, and motion. They are
+essential components in automation systems, robotics, IoT devices, and
+smart technologies. Sensors act as the "eyes and ears" of electronic
+systems by providing real-time data for monitoring and control.</p>
+<p><strong>Ultrasonic Sensor</strong></p>
+<img src="daily_docs/week3/day1_doc/image5.png" alt="Ultrasonic Sensor" />
+
+<p><strong>Introduction</strong></p>
+<p>An Ultrasonic Sensor is a distance-measuring sensor that uses
+ultrasonic sound waves to detect objects and measure distance.</p>
+<p><strong>Working Principle</strong></p>
+<ol type="1">
+<li><p>The sensor emits ultrasonic waves.</p></li>
+<li><p>The waves travel through the air.</p></li>
+<li><p>They bounce back after striking an object.</p></li>
+<li><p>The sensor measures the return time.</p></li>
+<li><p>Distance is calculated using the speed of sound.</p></li>
+</ol>
+<p><strong>Components</strong></p>
+<ul>
+<li><p>Transmitter</p></li>
+<li><p>Receiver</p></li>
+<li><p>Control Circuit</p></li>
+</ul>
+<p><strong>Features</strong></p>
+<ul>
+<li><p>Non-contact measurement</p></li>
+<li><p>High accuracy</p></li>
+<li><p>Low cost</p></li>
+<li><p>Easy interfacing with Arduino</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li><p>Obstacle detection robots</p></li>
+<li><p>Parking systems</p></li>
+<li><p>Water level monitoring</p></li>
+<li><p>Distance measurement devices</p></li>
+<li><p>Industrial automation</p></li>
+</ul>
+<p><strong>Light Sensor</strong></p>
+<img src="daily_docs/week3/day1_doc/image6.png" alt="Light Sensor" />
+
+<p><strong>Introduction</strong></p>
+<p>A Light Sensor detects the intensity of light in the surrounding
+environment. The most common type is the LDR (Light Dependent
+Resistor).</p>
+<p><strong>Working Principle</strong></p>
+<p>The resistance of an LDR changes according to the amount of light
+falling on it.</p>
+<ul>
+<li><p>More light → Lower resistance</p></li>
+<li><p>Less light → Higher resistance</p></li>
+</ul>
+<p>The change in resistance is converted into an electrical signal for
+processing.</p>
+<p><strong>Features</strong></p>
+<ul>
+<li><p>Simple design</p></li>
+<li><p>Low power consumption</p></li>
+<li><p>Inexpensive</p></li>
+<li><p>Sensitive to light variations</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li><p>Automatic street lights</p></li>
+<li><p>Mobile phone brightness control</p></li>
+<li><p>Solar tracking systems</p></li>
+<li><p>Smart home automation</p></li>
+<li><p>Security systems</p></li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li><p>Easy to use</p></li>
+<li><p>Reliable operation</p></li>
+<li><p>Low maintenance</p></li>
+</ul>
+<p><strong>Temperature Sensor</strong></p>
+<img src="daily_docs/week3/day1_doc/image7.png" alt="Temperature Sensor" />
+
+<p><strong>Introduction</strong></p>
+<p>A Temperature Sensor measures the temperature of its surroundings and
+converts it into an electrical signal.</p>
+<p>Popular temperature sensors include:</p>
+<ul>
+<li><p>LM35</p></li>
+<li><p>DHT11</p></li>
+<li><p>DHT22</p></li>
+<li><p>Thermistors</p></li>
+</ul>
+<p><strong>Working Principle</strong></p>
+<p>Temperature changes cause variations in electrical properties such as
+voltage or resistance. The sensor detects these changes and generates an
+output signal proportional to temperature.</p>
+<p><strong>Features</strong></p>
+<ul>
+<li><p>High sensitivity</p></li>
+<li><p>Accurate readings</p></li>
+<li><p>Fast response</p></li>
+<li><p>Easy interfacing</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li><p>Weather stations</p></li>
+<li><p>Air conditioning systems</p></li>
+<li><p>Medical devices</p></li>
+<li><p>Industrial monitoring</p></li>
+<li><p>Smart agriculture</p></li>
+</ul>
+<p><strong>Advantages</strong></p>
+<ul>
+<li><p>Accurate measurement</p></li>
+<li><p>Low power consumption</p></li>
+<li><p>Reliable performance</p></li>
+</ul>
+<p><strong>Introduction to Actuators</strong></p>
+<p>An actuator is a device that converts electrical energy into physical
+movement or mechanical action. While sensors collect information from
+the environment, actuators perform actions based on received commands.
+Actuators are widely used in robotics, industrial automation, automotive
+systems, and smart devices. Examples include motors, relays, valves, and
+hydraulic cylinders. They are considered the "muscles" of an automated
+system.</p>
+<p><strong>Types of Motors</strong></p>
+<p><strong>1. Induction Motor</strong></p>
+<img src="daily_docs/week3/day1_doc/image8.png" alt="Induction Motor" />
+
+<p>An induction motor is an AC motor that operates using electromagnetic
+induction.</p>
+<p><strong>Features</strong></p>
+<ul>
+<li><p>Robust construction</p></li>
+<li><p>Low maintenance</p></li>
+<li><p>High efficiency</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li><p>Pumps</p></li>
+<li><p>Fans</p></li>
+<li><p>Industrial machinery</p></li>
+</ul>
+<p><strong>DC Motor</strong></p>
+<img src="daily_docs/week3/day1_doc/image9.png" alt="DC Motor" />
+
+<p>A DC motor converts direct current into mechanical rotation.</p>
+<p><strong>Features</strong></p>
+<ul>
+<li><p>Simple speed control</p></li>
+<li><p>High starting torque</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li><p>Toys</p></li>
+<li><p>Robotics</p></li>
+<li><p>Electric vehicles</p></li>
+</ul>
+<p><strong>BLDC Motor (Brushless DC Motor)</strong></p>
+<img src="daily_docs/week3/day1_doc/image10.png" alt="BLDC Motor" />
+
+<p>BLDC motors operate without brushes, improving efficiency and
+lifespan.</p>
+<p><strong>Features</strong></p>
+<ul>
+<li><p>High efficiency</p></li>
+<li><p>Low maintenance</p></li>
+<li><p>Long life</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li><p>Drones</p></li>
+<li><p>Electric vehicles</p></li>
+<li><p>Computer cooling fans</p></li>
+</ul>
+<p><strong>Servo Motor</strong></p>
+<img src="daily_docs/week3/day1_doc/image11.png" alt="Servo Motor" />
+
+<p>A servo motor provides precise control over position and angle.</p>
+<p><strong>Features</strong></p>
+<ul>
+<li><p>Accurate positioning</p></li>
+<li><p>Controlled rotation</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li><p>Robotic arms</p></li>
+<li><p>CNC machines</p></li>
+<li><p>Automation systems</p></li>
+</ul>
+<p><strong>Stepper Motor</strong></p>
+<img src="daily_docs/week3/day1_doc/image12.png" alt="Stepper Motor" />
+
+<p>A stepper motor rotates in fixed angular steps.</p>
+<p><strong>Features</strong></p>
+<ul>
+<li><p>High precision</p></li>
+<li><p>Excellent position control</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li><p>3D printers</p></li>
+<li><p>CNC machines</p></li>
+<li><p>Industrial automation</p></li>
+</ul>
+<p><strong>Arduino Boards</strong></p>
+<p><strong>Arduino UNO</strong></p>
+<img src="daily_docs/week3/day1_doc/image13.png" alt="Arduino UNO" />
+
+<p><strong>Introduction</strong></p>
+<p>Arduino UNO is one of the most popular microcontroller development
+boards based on the ATmega328P microcontroller.</p>
+<p><strong>Specifications</strong></p>
+<ul>
+<li><p>Microcontroller: ATmega328P</p></li>
+<li><p>Operating Voltage: 5V</p></li>
+<li><p>Digital I/O Pins: 14</p></li>
+<li><p>Analog Inputs: 6</p></li>
+<li><p>Clock Speed: 16 MHz</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li><p>Robotics</p></li>
+<li><p>Sensor interfacing</p></li>
+<li><p>IoT projects</p></li>
+<li><p>Educational projects</p></li>
+</ul>
+<p><strong>Arduino Nano</strong></p>
+<img src="daily_docs/week3/day1_doc/image14.png" alt="Arduino Nano" />
+
+<p><strong>Introduction</strong></p>
+<p>Arduino Nano is a compact version of Arduino UNO designed for
+projects with limited space.</p>
+<p><strong>Specifications</strong></p>
+<ul>
+<li><p>Microcontroller: ATmega328P</p></li>
+<li><p>Operating Voltage: 5V</p></li>
+<li><p>Digital I/O Pins: 14</p></li>
+<li><p>Analog Inputs: 8</p></li>
+<li><p>Clock Speed: 16 MHz</p></li>
+</ul>
+<p><strong>Features</strong></p>
+<ul>
+<li><p>Small size</p></li>
+<li><p>Breadboard friendly</p></li>
+<li><p>USB connectivity</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li><p>Wearable devices</p></li>
+<li><p>Mini robotics</p></li>
+<li><p>Portable electronics</p></li>
+</ul>
+<p><strong>Arduino Mega</strong></p>
+<img src="daily_docs/week3/day1_doc/image15.png" alt="Arduino Mega" />
+
+<p><strong>Introduction</strong></p>
+<p>Arduino Mega is a powerful development board based on the ATmega2560
+microcontroller and is suitable for large projects requiring many
+input/output connections.</p>
+<p><strong>Specifications</strong></p>
+<ul>
+<li><p>Microcontroller: ATmega2560</p></li>
+<li><p>Operating Voltage: 5V</p></li>
+<li><p>Digital I/O Pins: 54</p></li>
+<li><p>Analog Inputs: 16</p></li>
+<li><p>Clock Speed: 16 MHz</p></li>
+</ul>
+<p><strong>Features</strong></p>
+<ul>
+<li><p>Large memory</p></li>
+<li><p>Multiple communication ports</p></li>
+<li><p>Supports many sensors and modules</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li><p>Industrial automation</p></li>
+<li><p>Advanced robotics</p></li>
+<li><p>Data logging systems</p></li>
+<li><p>Smart home projects</p></li>
+</ul>
+<p><strong>ESP32</strong></p>
+<p><strong>Introduction</strong></p>
+<p>The ESP32 is a low-cost, high-performance microcontroller developed
+by Express if Systems. It is widely used in Internet of Things (IOT)
+applications because it provides built-in Wi-Fi and Bluetooth
+connectivity, making it easy to connect devices to the internet and
+communicate wirelessly.</p>
+<img src="daily_docs/week3/day1_doc/image16.png" alt="ESP32" />
+
+<p><strong>Key Features</strong></p>
+<ul>
+<li><p>Dual-core 32-bit processor for efficient multitasking.</p></li>
+<li><p>Built-in Wi-Fi (802.11 b/g/n) and Bluetooth/Bluetooth Low Energy
+(BLE).</p></li>
+<li><p>Multiple GPIO (General Purpose Input/Output) pins.</p></li>
+<li><p>Supports Analog and digital sensors.</p></li>
+<li><p>Low power consumption suitable for battery-powered
+devices.</p></li>
+<li><p>High processing speed of up to 240 mhz.</p></li>
+<li><p>Supports various communication protocols such as UART, SPI, I2C,
+CAN, and PWM.</p></li>
+<li><p>Available with sufficient flash memory and RAM for embedded
+applications.</p></li>
+</ul>
+<p><strong>Architecture</strong></p>
+<p>The ESP32 consists of:</p>
+<ul>
+<li><p>CPU (Dual-Core Tensilica Xtensa Processor)</p></li>
+<li><p>Memory (SRAM and Flash Memory)</p></li>
+<li><p>Wi-Fi and Bluetooth Modules</p></li>
+<li><p>GPIO Interface</p></li>
+<li><p>ADC (Analog-to-Digital Converter)</p></li>
+<li><p>DAC (Digital-to-Analog Converter)</p></li>
+<li><p>Timers and PWM Controllers</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<p>ESP32 is widely used in:</p>
+<ul>
+<li><p>Smart Home Automation</p></li>
+<li><p>IoT-Based Monitoring Systems</p></li>
+<li><p>Smart Attendance Systems</p></li>
+<li><p>Weather Stations</p></li>
+<li><p>Industrial Automation</p></li>
+<li><p>Wireless Sensor Networks</p></li>
+<li><p>Robotics and Embedded Systems</p></li>
+<li><p>Healthcare Monitoring Devices</p></li>
+</ul>
+<p><strong>Programming ESP32</strong></p>
+<p>ESP32 can be programmed using:</p>
+<ul>
+<li><p>Arduino IDE</p></li>
+<li><p>Visual Studio Code with Platform IO</p></li>
+<li><p>ESP-IDF</p></li>
+<li><p>Micro-Python</p></li>
+</ul>
+<p>The code is typically written in C/C++ and uploaded through a USB
+connection.</p>
+<p><strong>Advantages</strong></p>
+<ul>
+<li><p>Built-in wireless connectivity.</p></li>
+<li><p>Cost-effective and widely available.</p></li>
+<li><p>Large community support and extensive documentation.</p></li>
+<li><p>Suitable for both beginners and advanced developers.</p></li>
+<li><p>Supports real-time data processing and cloud
+integration.</p></li>
+</ul>
+<p><strong>Conclusion</strong></p>
+<p>During this session, we learned about Physical AI, microcontrollers,
+microprocessors, edge computing, sensors, actuators, motors, and Arduino
+development boards. These technologies form the foundation of modern
+embedded systems, IoT devices, robotics, and automation. Understanding
+these concepts helps students develop practical engineering skills and
+prepares them for future projects involving smart and intelligent
+systems.</p>
+
+    </article>
+  </div>
+</body>
+</html>
+          <div class="day-card"><strong>Day 2</strong></div><!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Week 3 Day 2 — Summer Internship | Om Patil</title>
+<link rel="stylesheet" href="/days/_style.css" />
+<style>
+  /* Fix for images being cut off */
+  .docx-content img {
+    max-width: 100%;
+    height: auto !important;
+    display: block;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .docx-content p img,
+  .docx-content blockquote img {
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+  }
+  .docx-content h3 img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 10px 0;
+  }
+</style>
+</head>
+<body>
+  <div class="doc-container">
+    <header class="doc-head">
+      <p class="kicker">Week 3 — Summer Internship</p>
+      <h1>Day 2</h1>
+      <p class="tagline">Week 3 Day 2 documentation</p>
+    </header>
+    <article class="docx-content">
+<p><strong>Documentation on Firebase</strong></p>
+<p>Firebase is a platform by Google that helps developers build, run,
+and grow web and mobile applications without managing much backend
+infrastructure.</p>
+<p><strong>How to Create Use Firebase?</strong></p>
+<p>Step 1: Search Firebase on Google Chrome or Microsoft Edge</p>
+<img src="daily_docs/week3/day2_doc/image1.png" alt="Step 1 - Search Firebase" />
+
+<p>Step 2: Click on the link</p>
+<img src="daily_docs/week3/day2_doc/image2.png" alt="Step 2 - Click Link" />
+
+<p>Step 3: Open console in another tab by clicking on it</p>
+<img src="daily_docs/week3/day2_doc/image3.png" alt="Step 3 - Open Console" />
+
+<p>Step 4: Click on the Get started by setting up a Firebase project</p>
+<img src="daily_docs/week3/day2_doc/image4.png" alt="Step 4 - Get Started" />
+
+<p>Step 5: Type name for your project</p>
+<img src="daily_docs/week3/day2_doc/image5.png" alt="Step 5 - Project Name" />
+
+<p>Allow AI assistance to help It helps us during project by adding more
+details and ideas</p>
+<img src="daily_docs/week3/day2_doc/image6.png" alt="Step 6 - AI Assistance" />
+
+<p>Step 6: After Creating project click on Authentication from
+Security</p>
+<img src="daily_docs/week3/day2_doc/image7.png" alt="Step 7 - Authentication" />
+
+<p>Step 7: click on get started</p>
+<img src="daily_docs/week3/day2_doc/image8.png" alt="Step 8 - Get Started Auth" />
+
+<h3 id="step-8-get-started-with-firebase-authentication-by-adding-your-first-sign-in-method">Step 8: Get started with Firebase Authentication by adding your first sign-in method</h3>
+<img src="daily_docs/week3/day2_doc/image9.png" alt="Step 9 - Sign In Method" />
+
+<h3 id="step-9-enable-permission-and-enter-you-e-mail-and-save-it">Step 9: Enable permission and enter you e-mail and save it</h3>
+<img src="daily_docs/week3/day2_doc/image10.png" alt="Step 10 - Enable Permission" />
+
+<h3 id="step-10-now-select-real-time-database-from-database-and-storage">Step 10: Now select real time database from database and storage</h3>
+<img src="daily_docs/week3/day2_doc/image11.png" alt="Step 11 - Real Time Database" />
+
+<h3 id="step-11-now-click-on-create-database">Step 11: Now click on create database</h3>
+<img src="daily_docs/week3/day2_doc/image12.png" alt="Step 12 - Create Database" />
+
+<h3 id="step-12-select-singapore-in-the-below-option-or-any-of-those-which-is-nearer-from-your-location">Step 12: Select Singapore in the below option or any of those which is nearer from your location</h3>
+<img src="daily_docs/week3/day2_doc/image13.png" alt="Step 13 - Select Location" />
+
+<p>Step 13: Select start in test mode and click on enable</p>
+<img src="daily_docs/week3/day2_doc/image14.png" alt="Step 14 - Test Mode" />
+
+<p>Step 14: you will get results like this</p>
+<img src="daily_docs/week3/day2_doc/image15.png" alt="Step 15 - Results" />
+
+<p>Step 15: Now go to settings and select general</p>
+<img src="daily_docs/week3/day2_doc/image16.png" alt="Step 16 - Settings" />
+
+<p>Step 16: Now select service accounts</p>
+<img src="daily_docs/week3/day2_doc/image17.png" alt="Step 17 - Service Accounts" />
+
+<p>Step 17: Select any Admin SDK configuration snippet and click on
+generate new private key</p>
+<img src="daily_docs/week3/day2_doc/image18.png" alt="Step 18 - Generate Private Key" />
+
+<p>Step 18: Now click on database secrets</p>
+<img src="daily_docs/week3/day2_doc/image19.png" alt="Step 19 - Database Secrets" />
+
+<p>Step 19: Now copy the key</p>
+<img src="daily_docs/week3/day2_doc/image20.png" alt="Step 20 - Copy Key" />
+
+<p>Step 20: Now go to general and select general</p>
+<img src="daily_docs/week3/day2_doc/image21.png" alt="Step 21 - General Settings" />
+
+<p>Step 21: Scroll down and select web</p>
+<img src="daily_docs/week3/day2_doc/image22.png" alt="Step 22 - Select Web" />
+
+<p>Step 22: Add Nickname to your app click on register app</p>
+<img src="daily_docs/week3/day2_doc/image23.png" alt="Step 23 - Register App" />
+
+<p>Step 23: Get API key from here</p>
+<img src="daily_docs/week3/day2_doc/image24.png" alt="Step 24 - API Key" />
+
+<p>Step 24: Now open Arduino IDE</p>
+<img src="daily_docs/week3/day2_doc/image25.png" alt="Step 25 - Arduino IDE" />
+
+<p>Step 25: Select Board</p>
+<img src="daily_docs/week3/day2_doc/image26.png" alt="Step 26 - Select Board" />
+
+<p>Step 26: select COM 3</p>
+<img src="daily_docs/week3/day2_doc/image27.png" alt="Step 27 - Select COM" />
+
+<p>Step 27: Download ESP32</p>
+<img src="daily_docs/week3/day2_doc/image28.png" alt="Step 28 - Download ESP32" />
+
+<p>Step 28: Now write the given code in Arduino IDE</p>
+<img src="daily_docs/week3/day2_doc/image29.png" alt="Step 29 - Write Code" />
+
+<p>Step 28: now change</p>
+<p>1.WiFi_SSID with your mobile hotspot name</p>
+<p>2.WiFi_password with your mobile hotspot name</p>
+<p>3.change Database URL with your real time database URL</p>
+<img src="daily_docs/week3/day2_doc/image30.png" alt="Step 30 - Database URL" />
+
+<p>4.Change your database secret with your database secret</p>
+<img src="daily_docs/week3/day2_doc/image31.png" alt="Step 31 - Database Secret" />
+
+<p>Step 29: Now take ESP32 Three Jumper wires and DHT11 and connect it
+like this</p>
+<img src="daily_docs/week3/day2_doc/image32.png" alt="Step 32 - Circuit Connection" />
+
+<p>Check the program, connections of wire properly and run the
+program</p>
+<p><strong>FINAL OUTPUT</strong></p>
+<img src="daily_docs/week3/day2_doc/image33.png" alt="Final Output" />
+
+    </article>
+  </div>
+</body>
+</html>
+          <div class="day-card"><strong>Day 3</strong></div><!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Week 3 Day 3 — Firebase on LED | Om Patil</title>
+<link rel="stylesheet" href="/days/_style.css" />
+</head>
+<body>
+  <div class="doc-container">
+    <header class="doc-head">
+      <p class="kicker">Week 3 — Summer Internship</p>
+      <h1>Day 4 — Firebase on LED</h1>
+      <p class="tagline">Controlling an LED with Firebase Realtime Database and ESP32</p>
+    </header>
+    <article class="docx-content">
+<p>Documentation of Firebase on LED</p>
+<p>Firebase is a platform by Google that helps developers build, run,
+and grow web and mobile applications without managing much backend
+infrastructure.</p>
+<p>How to Create Use Firebase?</p>
+<p>Step 1: Search Firebase on Google Chrome or Microsoft Edge</p>
+<p><img src="daily_docs/week3/day3_doc/image1.png" alt="Firebase Search" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 2: Click on the link</p>
+<p><img src="daily_docs/week3/day3_doc/image2.png" alt="Firebase Link" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 3: Open console in another tab by clicking on it</p>
+<p><img src="daily_docs/week3/day3_doc/image3.png" alt="Firebase Console" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 4: Click on the Get started by setting up a Firebase project</p>
+<p><img src="daily_docs/week3/day3_doc/image4.png" alt="Get Started" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 5: Type name for your project</p>
+<p><img src="daily_docs/week3/day3_doc/image5.png" alt="Project Name" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Allow AI assistance to help It helps us during project by adding more
+details and ideas</p>
+<p><img src="daily_docs/week3/day3_doc/image6.png" alt="AI Assistance" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 6: After Creating project click on Authentication from
+Security</p>
+<p><img src="daily_docs/week3/day3_doc/image7.png" alt="Authentication" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 7: click on get started</p>
+<p><img src="daily_docs/week3/day3_doc/image8.png" alt="Get Started Auth" style="width:100%;max-width:800px;height:auto" /></p>
+<h3
+id="step-8-get-started-with-firebase-authentication-by-adding-your-first-sign-in-method">Step
+8: Get started with Firebase Authentication by adding your first sign-in
+method</h3>
+<h3><img src="daily_docs/week3/day3_doc/image9.png" alt="Sign-in Method" style="width:100%;max-width:800px;height:auto" /></h3>
+<h3 id="step-9-enable-permission-and-enter-you-e-mail-and-save-it">Step
+9: Enable permission and enter you e-mail and save it</h3>
+<h3><img src="daily_docs/week3/day3_doc/image10.png" alt="Enable Permission" style="width:100%;max-width:800px;height:auto" /></h3>
+<h3
+id="step-10-now-select-real-time-database-from-database-and-storage">Step
+10: Now select real time database from database and storage</h3>
+<h3><img src="daily_docs/week3/day3_doc/image11.png" alt="Real-time Database" style="width:100%;max-width:800px;height:auto" /></h3>
+<h3 id="step-11-now-click-on-create-database">Step 11: Now click on
+create database</h3>
+<h3><img src="daily_docs/week3/day3_doc/image12.png" alt="Create Database" style="width:100%;max-width:800px;height:auto" /></h3>
+<h3></h3>
+<h3
+id="step-12-select-singapore-in-the-below-option-or-any-of-those-which-is-nearer-from-your-location">Step
+12: Select Singapore in the below option or any of those which is nearer
+from your location</h3>
+<h3><img src="daily_docs/week3/day3_doc/image13.png" alt="Select Location" style="width:100%;max-width:800px;height:auto" /></h3>
+<p>Step 13: Select start in test mode and click on enable</p>
+<p><img src="daily_docs/week3/day3_doc/image14.png" alt="Test Mode" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 14: you will get results like this</p>
+<p><img src="daily_docs/week3/day3_doc/image15.png" alt="Results" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 15: Now go to settings and select general</p>
+<p><img src="daily_docs/week3/day3_doc/image16.png" alt="Settings General" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 16: Now select service accounts</p>
+<p><img src="daily_docs/week3/day3_doc/image17.png" alt="Service Accounts" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 17: Select any Admin SDK configuration snippet and click on
+generate new private key</p>
+<p><img src="daily_docs/week3/day3_doc/image18.png" alt="Admin SDK" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 18: Now click on database secrets</p>
+<p><img src="daily_docs/week3/day3_doc/image18.png" alt="Database Secrets" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 19: Now copy the key</p>
+<p><img src="daily_docs/week3/day3_doc/image19.png" alt="Copy Key" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 20: Now go to general and select general</p>
+<p><img src="daily_docs/week3/day3_doc/image20.png" alt="General Settings" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 21: Scroll down and select web</p>
+<p><img src="daily_docs/week3/day3_doc/image21.png" alt="Web Setup" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 22: Add Nickname to your app click on register app</p>
+<p><img src="daily_docs/week3/day3_doc/image22.png" alt="Register App" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 23: Get API key from here</p>
+<p><img src="daily_docs/week3/day3_doc/image23.png" alt="API Key" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 24: Now open Arduino IDE</p>
+<p><img src="daily_docs/week3/day3_doc/image24.png" alt="Arduino IDE" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 25: Select Board</p>
+<p><img src="daily_docs/week3/day3_doc/image25.png" alt="Select Board" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 26: select COM 3</p>
+<p><img src="daily_docs/week3/day3_doc/image26.png" alt="COM Port" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 27: Download ESP32</p>
+<p><img src="daily_docs/week3/day3_doc/image27.png" alt="Download ESP32" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 28: Now write the given code in Arduino IDE</p>
+<p><img src="daily_docs/week3/day3_doc/image28.png" alt="Write Code" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Step 29: now change</p>
+<p>1.WiFi_SSID with your mobile hotspot name</p>
+<p>2.WiFi_password with your mobile hotspot name</p>
+<p>3.change Database URL with your real time database URL</p>
+<p><img src="daily_docs/week3/day3_doc/image29.png" alt="WiFi Setup" style="width:100%;max-width:800px;height:auto" /></p>
+<p>4.Change your database secret with your database secret</p>
+<p><img src="daily_docs/week3/day3_doc/image30.png" alt="Database Secret" style="width:100%;max-width:800px;height:auto" /></p>
+<p>5.If you are inserting negative terminal of LED to the D4 then write
+4 in the LED_PIN</p>
+<p><img src="daily_docs/week3/day3_doc/image31.png" alt="LED Pin" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Upload the program</p>
+<p><img src="daily_docs/week3/day3_doc/image32.png" alt="Upload Program" style="width:100%;max-width:800px;height:auto" /></p>
+<p>Final result</p>
+<p><img src="daily_docs/week3/day3_doc/image33.png" alt="Final Result" style="width:100%;max-width:600px;height:auto" /></p>
+<p>CONCLUSION</p>
+<p>Using Firebase to control an LED through a website demonstrated how
+cloud-based platforms can enable real-time communication between web
+applications and hardware devices. Firebase acted as an efficient bridge
+between the website and the microcontroller, allowing LED states to be
+updated instantly without the need for a dedicated server. This project
+helped in understanding concepts such as cloud databases, real-time data
+synchronization, and IoT integration. Overall, Firebase simplified the
+development process and provided a reliable solution for remotely
+controlling hardware devices through a web interface.</p>
+    </article>
+  </div>
+</body>
+</html>
         </div>
       </div>
     </div>
